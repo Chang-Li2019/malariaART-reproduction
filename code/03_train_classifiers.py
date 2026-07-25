@@ -103,6 +103,31 @@ def pick_best_classifier(results: dict[str, dict]) -> str:
     return max(results, key=valid_auc)
 
 
+def performance_row(gene_id: str, results: dict[str, dict], best: str) -> dict:
+    """Flatten every classifier's scores into one row, with the best model's scores copied out."""
+    row = {"gene": gene_id, "best_model": best}
+    for name, scores in results.items():
+        for metric, value in scores.items():
+            row[f"{name}_{metric}"] = value
+    row.update(results[best])
+    return row
+
+
+def train_genes(config: Config, feature_dir: Path, labels, genes: list[str]) -> list[dict]:
+    """Train and score every gene that has cached features."""
+    rows = []
+    for position, gene_id in enumerate(genes, 1):
+        if not (feature_dir / f"{gene_id}_features.pkl").exists():
+            print(f"[{position}/{len(genes)}] {gene_id}  SKIP (no cached features)")
+            continue
+        results = train_all_classifiers(load_features(feature_dir, gene_id), labels, config)
+        best = pick_best_classifier(results)
+        rows.append(performance_row(gene_id, results, best))
+        print(f"[{position}/{len(genes)}] {gene_id}  best={best}  "
+              f"valid auROC {results[best]['valid_auc']:.4f}  test auROC {results[best]['test_auc']:.4f}")
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--config")
@@ -114,7 +139,6 @@ def main() -> int:
 
     config = load_config(Path(args.config) if args.config else None)
     feature_dir = Path(args.features).resolve() if args.features else config.feature_cache
-    labels = load_labels(config)
     genes = list(read_gene_panel(config)["Gene ID"]) if args.all else (args.genes or [])
     if not genes:
         parser.error("give --genes GENE [GENE ...] or --all")
@@ -123,23 +147,7 @@ def main() -> int:
         print(f"       run: python code/02_extract_esm3_features.py --genes {' '.join(genes[:3])}")
         return 2
 
-    rows = []
-    for position, gene_id in enumerate(genes, 1):
-        model_file = feature_dir / f"{gene_id}_features.pkl"
-        if not model_file.exists():
-            print(f"[{position}/{len(genes)}] {gene_id}  SKIP (no cached features)")
-            continue
-        results = train_all_classifiers(load_features(feature_dir, gene_id), labels, config)
-        best = pick_best_classifier(results)
-        row = {"gene": gene_id, "best_model": best}
-        for name, scores in results.items():
-            for metric, value in scores.items():
-                row[f"{name}_{metric}"] = value
-        row.update(results[best])
-        rows.append(row)
-        print(f"[{position}/{len(genes)}] {gene_id}  best={best}  "
-              f"valid auROC {results[best]['valid_auc']:.4f}  test auROC {results[best]['test_auc']:.4f}")
-
+    rows = train_genes(config, feature_dir, load_labels(config), genes)
     if rows and args.out:
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)
         pd.DataFrame(rows).to_csv(args.out, index=False)

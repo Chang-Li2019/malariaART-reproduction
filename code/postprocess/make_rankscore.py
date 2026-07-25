@@ -50,6 +50,22 @@ def compare_to_shipped(config: Config, gene_id: str, rebuilt: pd.DataFrame) -> f
     return float(np.abs(shipped["rankscore"].to_numpy() - rebuilt["rankscore"].to_numpy()).max())
 
 
+def process_gene(config: Config, gene_id: str, position: int, total: int,
+                 output_dir: Path | None, check: bool) -> float:
+    """Rebuild one gene, optionally write it and compare to the shipped file. Returns delta."""
+    rebuilt = rebuild_gene(config, gene_id)
+    message = f"[{position}/{total}] {gene_id}  {len(rebuilt)} mutations"
+    delta = float("nan")
+    if check:
+        delta = compare_to_shipped(config, gene_id, rebuilt)
+        matches = not np.isnan(delta) and delta < 1e-12
+        message += f"   max|delta| = {delta:.2e}  {'OK' if matches else 'MISMATCH'}"
+    if output_dir:
+        rebuilt.to_csv(output_dir / f"{gene_id}_mutagenesis_rankscore.csv", index=False)
+    print(message)
+    return delta
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--config")
@@ -68,26 +84,17 @@ def main() -> int:
     if output_dir:
         output_dir.mkdir(parents=True, exist_ok=True)
 
-    worst = 0.0
-    failures = []
+    deltas = {}
     for position, gene_id in enumerate(genes, 1):
-        rebuilt = rebuild_gene(config, gene_id)
-        message = f"[{position}/{len(genes)}] {gene_id}  {len(rebuilt)} mutations"
-        if args.check:
-            delta = compare_to_shipped(config, gene_id, rebuilt)
-            matches = not np.isnan(delta) and delta < 1e-12
-            worst = max(worst, 0.0 if np.isnan(delta) else delta)
-            if not matches:
-                failures.append(gene_id)
-            message += f"   max|delta| = {delta:.2e}  {'OK' if matches else 'MISMATCH'}"
-        if output_dir:
-            rebuilt.to_csv(output_dir / f"{gene_id}_mutagenesis_rankscore.csv", index=False)
-        print(message)
+        deltas[gene_id] = process_gene(config, gene_id, position, len(genes), output_dir, args.check)
 
-    if args.check:
-        print(f"\nworst deviation across {len(genes)} gene(s): {worst:.3e}")
-        print("reconstruction MATCHES the shipped rankscores" if not failures
-              else f"MISMATCH in: {', '.join(failures)}")
+    if not args.check:
+        return 0
+    failures = [gene_id for gene_id, delta in deltas.items() if np.isnan(delta) or delta >= 1e-12]
+    worst = max((delta for delta in deltas.values() if not np.isnan(delta)), default=0.0)
+    print(f"\nworst deviation across {len(genes)} gene(s): {worst:.3e}")
+    print("reconstruction MATCHES the shipped rankscores" if not failures
+          else f"MISMATCH in: {', '.join(failures)}")
     return 1 if failures else 0
 
 

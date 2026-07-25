@@ -136,6 +136,32 @@ def select_top_variant(scan: pd.DataFrame) -> pd.Series | None:
     return scorable.loc[scorable["test_auc"].idxmax()]
 
 
+def top_variant_row(gene_id: str, scan: pd.DataFrame, top: pd.Series) -> dict:
+    """One output row summarising a gene's best single-variant predictor."""
+    row = {"gene": gene_id, "top_snp": top["variant"], "n_variants_tested": len(scan),
+           "odds_ratio": top["odds_ratio"], "p_value": top["p_value"]}
+    for split in SPLITS:
+        row[f"snp_{split}_auc"] = top[f"{split}_auc"]
+        row[f"snp_{split}_aupr"] = top[f"{split}_aupr"]
+    return row
+
+
+def scan_genes(config: Config, reference: dict[str, str], labels: pd.DataFrame,
+               genes: list[str]) -> list[dict]:
+    """Select the best single-variant predictor for each gene."""
+    rows = []
+    for position, gene_id in enumerate(genes, 1):
+        scan = scan_gene(config, gene_id, reference, labels)
+        top = select_top_variant(scan)
+        if top is None:
+            print(f"[{position}/{len(genes)}] {gene_id}  no scorable variant ({len(scan)} tested)")
+            continue
+        rows.append(top_variant_row(gene_id, scan, top))
+        print(f"[{position}/{len(genes)}] {gene_id}  top={top['variant']:<12} "
+              f"test auROC {top['test_auc']:.4f}  OR {top['odds_ratio']:.3g}  ({len(scan)} variants)")
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--config")
@@ -151,22 +177,7 @@ def main() -> int:
     if not genes:
         parser.error("give --genes GENE [GENE ...] or --all")
 
-    rows = []
-    for position, gene_id in enumerate(genes, 1):
-        scan = scan_gene(config, gene_id, reference, labels)
-        top = select_top_variant(scan)
-        if top is None:
-            print(f"[{position}/{len(genes)}] {gene_id}  no scorable variant ({len(scan)} tested)")
-            continue
-        row = {"gene": gene_id, "top_snp": top["variant"], "n_variants_tested": len(scan),
-               "odds_ratio": top["odds_ratio"], "p_value": top["p_value"]}
-        for split in SPLITS:
-            row[f"snp_{split}_auc"] = top[f"{split}_auc"]
-            row[f"snp_{split}_aupr"] = top[f"{split}_aupr"]
-        rows.append(row)
-        print(f"[{position}/{len(genes)}] {gene_id}  top={top['variant']:<12} "
-              f"test auROC {top['test_auc']:.4f}  OR {top['odds_ratio']:.3g}  ({len(scan)} variants)")
-
+    rows = scan_genes(config, reference, labels, genes)
     if rows and args.out:
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)
         pd.DataFrame(rows).to_csv(args.out, index=False)
