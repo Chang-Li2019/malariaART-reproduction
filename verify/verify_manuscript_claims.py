@@ -335,12 +335,16 @@ def check_fig4c_frequencies(config: Config) -> list[Finding]:
                     "these are TEST-SPLIT frequencies; whole-cohort values differ")]
 
 
-def check_permutation_exo(config: Config) -> list[Finding]:
-    """Fig 5A: EXO permutation importance — E415G should be the only significant variant."""
+def check_permutation(config: Config) -> list[Finding]:
+    """Fig 5B: EXO permutation importance (E415G significant); Fig 5A: ATP4 data is missing."""
     exo_path = config.permutation / "PF3D7_1362500_permut100.pkl"
+    findings = [Finding("fig5a.atp4_permutation", "ATP4 G1128R permutation result (Fig 5A)",
+                        "100-permutation result", "not in repo", "MISSING",
+                        "PF3D7_1211900_permut100.pkl does not exist; only a 30-permutation dict")]
     if not exo_path.exists():
-        return [Finding("fig5a.exo_permutation", "EXO E415G is the only significant variant", "E415G",
-                        "n/a", "MISSING")]
+        findings.append(Finding("fig5b.exo_permutation", "EXO E415G is the only significant variant",
+                                "E415G", "n/a", "MISSING"))
+        return findings
     with open(exo_path, "rb") as handle:
         importances, _mean, variants, confidence = pickle.load(handle)
     importances = np.asarray(importances, dtype=float)
@@ -351,16 +355,14 @@ def check_permutation_exo(config: Config) -> list[Finding]:
     baseline = float(importances[order[0]] + confidence[:, order[0]].mean())
     second_name = names[order[1]]
     second_importance = importances[order[1]]
-    return [
-        Finding("fig5a.exo_top_variant", "EXO E415G drives the model", "E415G", top_name,
-                verdict(top_name == "E415G"),
-                f"importance {importances[order[0]]:.4f} (baseline auROC ~{baseline:.4f})"),
-        Finding("fig5a.exo_separation", "only E415G shows a significant auROC drop", "next variant near zero",
-                f"{second_name} = {second_importance:.4f}", verdict(second_importance < 0.05),
-                "E415G is the only variant whose 95% CI lies entirely below the baseline"),
-        Finding("fig5b.atp4_permutation", "ATP4 G1128R permutation result (Fig 5B)", "100-permutation result",
-                "not in repo", "MISSING", "PF3D7_1211900_permut100.pkl does not exist; only a 30-permutation dict"),
-    ]
+    findings.append(Finding("fig5b.exo_top_variant", "EXO E415G drives the model", "E415G", top_name,
+                            verdict(top_name == "E415G"),
+                            f"importance {importances[order[0]]:.4f} (baseline auROC ~{baseline:.4f})"))
+    findings.append(Finding("fig5b.exo_separation", "only E415G shows a significant auROC drop",
+                            "next variant near zero", f"{second_name} = {second_importance:.4f}",
+                            verdict(second_importance < 0.05),
+                            "E415G is the only variant whose 95% CI lies entirely below the baseline"))
+    return findings
 
 
 def find_hdr_donors(table: pd.DataFrame) -> dict[str, list[str]]:
@@ -438,7 +440,7 @@ def check_supplementary_numbering(config: Config) -> list[Finding]:
 ALL_CHECKS = [
     check_cohort_counts, check_gene_panel, check_k13_performance, check_crt_wd11,
     check_gene_rankings, check_fig1d_accuracies, check_fig3a_wilcoxon, check_fig3bc_spearman,
-    check_fig4_aupr_gain, check_fig4c_genes, check_fig4c_frequencies, check_permutation_exo,
+    check_fig4_aupr_gain, check_fig4c_genes, check_fig4c_frequencies, check_permutation,
     check_crispr_donors, check_fig5c_rsa, check_supplementary_numbering,
 ]
 

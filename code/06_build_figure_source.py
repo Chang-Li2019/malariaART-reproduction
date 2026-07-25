@@ -289,16 +289,19 @@ def fig4c_rows(frequency_row: pd.Series, gene_id: str, symbols: dict[str, str], 
 
 
 def write_fig5ab(config: Config, out_dir: Path) -> None:
+    # Fig 5A = ATP4 (PF3D7_1211900): its 100-permutation result is not in the source tree.
+    atp4_missing = pd.DataFrame(columns=["gene", "gene_symbol", "variant", "importance", "baseline_auc"])
+    write_csv(atp4_missing, out_dir / "fig5a_atp4_permutation.csv",
+              "PF3D7_1211900_permut100.pkl — does not exist in the source tree", "MISSING")
+
+    # Fig 5B = EXO (PF3D7_1362500).
     exo_path = config.permutation / "PF3D7_1362500_permut100.pkl"
     if not exo_path.exists():
         empty = pd.DataFrame(columns=["gene", "variant", "importance"])
-        write_csv(empty, out_dir / "fig5ab_permutation.csv", "permutation pickles", "MISSING")
+        write_csv(empty, out_dir / "fig5b_exo_permutation.csv", "permutation pickle", "MISSING")
         return
-    write_csv(exo_permutation_table(exo_path), out_dir / "fig5a_exo_permutation.csv",
+    write_csv(exo_permutation_table(exo_path), out_dir / "fig5b_exo_permutation.csv",
               "results/permutation/PF3D7_1362500_permut100.pkl (100 permutations, ProteinBERT model)")
-    empty = pd.DataFrame(columns=["gene", "gene_symbol", "variant", "importance", "baseline_auc"])
-    write_csv(empty, out_dir / "fig5b_atp4_permutation.csv",
-              "PF3D7_1211900_permut100.pkl — does not exist in the source tree", "MISSING")
 
 
 def exo_permutation_table(pickle_path: Path) -> pd.DataFrame:

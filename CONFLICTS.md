@@ -208,7 +208,7 @@ So the cohort, like the gene panel, has to be shipped as data rather than derive
 | Item | Consequence |
 |---|---|
 | **Ring-stage survival values (Fig 5C)** | No raw or summarised RSA numbers, and no plotting script, exist in the source tree. Fig 5C survives only as a flattened vector image. `data/figure_source/fig5c_rsa.csv` ships the clone/edit structure with the corrected labels, awaiting the measurements. |
-| **ATP4 100-permutation result (Fig 5B)** | `PF3D7_1211900_permut100.pkl` does not exist; only a 30-permutation dictionary (G1128R importance 0.176, baseline 0.680). Note this contradicts the Results claim that EXO's baseline auROC exceeded ATP4's — on the 30-permutation baselines it is the other way round (0.662 vs 0.680). The claim *is* supported by the model performance tables (0.865 vs 0.688). |
+| **ATP4 100-permutation result (Fig 5A)** | `PF3D7_1211900_permut100.pkl` does not exist; only a 30-permutation dictionary (G1128R importance 0.176, baseline 0.680). Note this contradicts the Results claim that EXO's baseline auROC exceeded ATP4's — on the 30-permutation baselines it is the other way round (0.662 vs 0.680). The claim *is* supported by the model performance tables (0.865 vs 0.688). The EXO panel (Fig 5B) has its 100-permutation pickle. |
 | **Raw Sanger `.ab1` traces** | Only chromatogram JPEGs embedded in Supplementary Figs S2–S4. |
 | **Plotting code for Figs 1–5** | Made in R/Excel outside the tree; there are zero `.R` files in the repository. This release ships per-panel source data instead. |
 

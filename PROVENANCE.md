@@ -18,8 +18,8 @@ data does not exist anywhere.
 | 3B/3C evidence correlation | `fig3bc_evidence_spearman.csv`, `fig3bc_statistics.csv` | " | joined to Oberstaller 2021 `mmc1.xlsx` Suppl. Table 1 (152/167 matched) | OK |
 | 4A/4B PLM vs single variant | `fig4ab_dl_vs_snp.csv`, `fig4b_summary.csv` | " | `snp_ml_comparison.csv` (Supplementary Table 5) | OK |
 | 4C variant frequencies | `fig4c_variant_freq.csv` | " | Supplementary Table 6, **test split** | OK |
-| 5A EXO permutation | `fig5a_exo_permutation.csv` | " | `results/permutation/PF3D7_1362500_permut100.pkl` (ProteinBERT, validation split) | OK |
-| 5B ATP4 permutation | `fig5b_atp4_permutation.csv` | — | `PF3D7_1211900_permut100.pkl` **does not exist** | MISSING |
+| 5A ATP4 permutation | `fig5a_atp4_permutation.csv` | — | `PF3D7_1211900_permut100.pkl` **does not exist** | MISSING |
+| 5B EXO permutation | `fig5b_exo_permutation.csv` | " | `results/permutation/PF3D7_1362500_permut100.pkl` (ProteinBERT, validation split) | OK |
 | 5C ring-stage survival | `fig5c_rsa.csv` (structure only) | — | no RSA values exist in any form | MISSING |
 | S1 architecture schematic | — | — | drawn by hand; describes the CNN, not the model behind Fig 1B/2/4 | n/a |
 | S2–S4 Sanger chromatograms | — | — | JPEGs embedded in the pptx; no `.ab1` traces | n/a |

@@ -143,7 +143,7 @@ outputs are already committed, so you do not need to run it.
 Three things in the manuscript cannot be reproduced from any data that exists:
 
 1. **Ring-stage survival values (Fig 5C)** — no raw or summarised numbers survive.
-2. **ATP4 100-permutation result (Fig 5B)** — the pickle does not exist.
+2. **ATP4 100-permutation result (Fig 5A)** — the pickle does not exist.
 3. **Figure rendering** — the published figures were drawn outside this tree, so
    this package ships per-panel source data rather than plotting code.
 
