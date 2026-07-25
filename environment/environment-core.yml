@@ -1,0 +1,17 @@
+# Core environment for conda users — the CPU-only path (no torch, no esm).
+# Equivalent to requirements-core.txt. For feature regeneration (Tier 2/3) see
+# requirements-esm.txt / environment.yml.
+#
+#   conda env create -f environment/environment-core.yml
+#   conda activate malariaart-core
+name: malariaart-core
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy=1.26.4
+  - pandas=2.1.4
+  - scipy=1.15.0
+  - scikit-learn=1.6.0
+  - pyyaml=6.0.2
+  - openpyxl>=3.1

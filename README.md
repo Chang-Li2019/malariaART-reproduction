@@ -109,17 +109,31 @@ scan is in `results/mutagenesis_56genes/`, so nobody has to rerun it. The code i
 
 ## Environment
 
+There are two dependency sets. Most people only need the first.
+
+**Core (CPU only)** — runs Tier 0 (`verify`) and all of Tier 1 except feature
+regeneration. Six packages, no torch, no esm, no GPU. Requires Python ≥ 3.10.
+
 ```bash
-conda env create -f environment/environment.yml   # creates esm_env
-conda activate esm_env
+python -m venv .venv && source .venv/bin/activate
+pip install -r environment/requirements-core.txt
+python verify/verify_manuscript_claims.py
 ```
 
-Developed with torch 2.5.1 + CUDA, esm 3.1.2, scikit-learn 1.6.0, numpy 1.26.4,
-pandas 2.1.4, scipy 1.15.0. Tier 0 and most of Tier 1 need only numpy/pandas/scipy/
-scikit-learn/pyyaml. ESM-3 weights (~5 GB) download once from HuggingFace on first use.
+(conda users: `conda env create -f environment/environment-core.yml`.)
 
-`code/convert_supplementary_to_csv.py` is the only script needing `openpyxl`; its
-outputs are already committed, so you do not need to run it.
+**ESM-3 (GPU)** — only for regenerating features (Tier 2) or the DMS (Tier 3).
+Adds `torch` and `esm`; needs a CUDA GPU.
+
+```bash
+pip install -r environment/requirements-esm.txt
+```
+
+ESM-3 weights (~5 GB) download once from HuggingFace on first use.
+
+Versions are pinned to the ones that produced the published results (numpy 1.26.4,
+pandas 2.1.4, scipy 1.15.0, scikit-learn 1.6.0; torch 2.5.1 + CUDA 12.4 on an
+RTX 3090). The full exact environment is `environment/environment.yml`.
 
 ---
 

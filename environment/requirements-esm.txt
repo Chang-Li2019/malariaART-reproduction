@@ -1,0 +1,17 @@
+# ESM-3 dependencies — only for regenerating features (Tier 2) and the DMS (Tier 3).
+#
+# Needed by 02_extract_esm3_features.py and code/mutagenesis_rf/. Requires a CUDA
+# GPU. If you only run verify/ or the read-only Tier 1 scripts, you do NOT need
+# any of this — use requirements-core.txt alone.
+#
+#   pip install -r environment/requirements-esm.txt
+#
+# torch must match your CUDA toolkit; the exact build the results were produced
+# with (torch 2.5.1 + CUDA 12.4 on an RTX 3090) is recorded in environment.yml.
+# Install torch per https://pytorch.org/get-started/locally/ if the line below
+# does not resolve for your platform.
+
+-r requirements-core.txt
+
+torch==2.5.1
+esm==3.1.2
