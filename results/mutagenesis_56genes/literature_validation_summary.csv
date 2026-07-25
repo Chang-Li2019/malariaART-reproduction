@@ -1,0 +1,27 @@
+gene,marker,class,percentile,call,n_train_isolates,seen_in_training
+K13 PF3D7_1343700,C580Y,validated,99.9,Resistant,178,True
+K13 PF3D7_1343700,R561H,validated,100.0,Resistant,7,True
+K13 PF3D7_1343700,N458Y,validated,100.0,Resistant,8,True
+K13 PF3D7_1343700,I543T,validated,100.0,Resistant,14,True
+K13 PF3D7_1343700,Y493H,validated,99.8,Resistant,13,True
+K13 PF3D7_1343700,P553L,validated,99.8,Resistant,5,True
+K13 PF3D7_1343700,A675V,validated,96.8,Resistant,12,True
+K13 PF3D7_1343700,R539T,validated,95.5,Resistant,38,True
+K13 PF3D7_1343700,R622I,validated,83.5,Resistant,0,False
+K13 PF3D7_1343700,F446I,validated,66.3,Resistant,6,True
+K13 PF3D7_1343700,P574L,validated,59.3,Sensitive,5,True
+K13 PF3D7_1343700,C469Y,validated,6.8,Sensitive,0,False
+K13 PF3D7_1343700,M476I,validated,0.1,Sensitive,1,True
+fd PF3D7_1318100,D193Y,ART-background,100.0,Resistant,414,True
+arps10 PF3D7_1460900,D128H,ART-background,100.0,Resistant,396,True
+arps10 PF3D7_1460900,V127M,ART-background,43.1,Sensitive,392,True
+arps10 PF3D7_1460900,D128Y,ART-background,3.1,Sensitive,28,True
+mdr2 PF3D7_1447900,T484I,ART-background,67.6,Sensitive,470,True
+mdr2 PF3D7_1447900,I492V,ART-background,20.2,Sensitive,25,True
+dhps PF3D7_0810800,A581G,NEG-antifolate,94.4,Sensitive,309,True
+dhps PF3D7_0810800,K540E,NEG-antifolate,72.3,Sensitive,381,True
+dhps PF3D7_0810800,S436A,NEG-antifolate,10.8,Sensitive,0,False
+mdr1 PF3D7_0523000,Y184F,NEG-aminoq,100.0,Resistant,301,True
+mdr1 PF3D7_0523000,N1042D,NEG-aminoq,36.2,Sensitive,9,True
+mdr1 PF3D7_0523000,D1246Y,NEG-aminoq,12.2,Sensitive,0,False
+mdr1 PF3D7_0523000,N86Y,NEG-aminoq,0.1,Sensitive,13,True

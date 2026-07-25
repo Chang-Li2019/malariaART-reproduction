@@ -1,0 +1,65 @@
+# malariaART_release — single source of truth for paths.
+#
+# Every script in code/ and verify/ resolves its inputs through this file.
+# To relocate the package, edit `release_root` (and `external_*` if you keep the
+# large regenerable artifacts outside the release folder).
+
+# Root of this release folder. Scripts default to the directory containing this
+# file, so you normally do not need to change it.
+release_root: .
+
+# ---------------------------------------------------------------------------
+# Shipped inputs (all live inside the release folder)
+# ---------------------------------------------------------------------------
+paths:
+  phenotype_trac1: data/raw/phenotype/41467_2018_7588_MOESM20_ESM.csv
+  phenotype_trac2: data/raw/phenotype/tracII_phenotype.txt
+  cohort_metadata: data/raw/metadata/ARTR_metadata.csv      # 1293 analysed isolates
+  pf7_metadata:    data/raw/metadata/pf7_metadata.csv        # full Pf7 sample table
+
+  reference_proteins: data/raw/reference/PlasmoDB-66_proteins_panel.fasta
+  reference_cds:      data/raw/reference/PlasmoDB-66_CDS_panel.fasta
+  sequences_dir:      data/raw/sequences                     # {gene}.csv.gz, headerless sid,seq
+
+  gene_list_plasmodb_173: data/raw/gene_lists/plasmodb_artr_query_173.tsv
+  gene_list_panel_167:    data/raw/gene_lists/analysed_panel_167.tsv
+  gene_list_kucharski_12: data/raw/gene_lists/kucharski_artr_12.tsv
+  gene_list_dms_56:       data/raw/gene_lists/dms_genes_56.txt
+
+  evidence_scores: data/raw/external/oberstaller_evidence_scores.csv
+
+  published_supplementary: data/published_tables/supplementary          # verbatim .xlsx
+  published_supplementary_csv: data/published_tables/supplementary_csv  # CSV exports (banner row dropped)
+  published_source_tables: data/published_tables/source_tables
+
+  figure_source_out: data/figure_source
+
+  rf_models:        results/rf_models_final
+  dms_results:      results/mutagenesis_56genes/dms
+  rankscore_results: results/mutagenesis_56genes/rankscore
+  permutation:      results/permutation
+
+# ---------------------------------------------------------------------------
+# Regenerated artifacts (NOT shipped — see README "Tier 2")
+# ---------------------------------------------------------------------------
+# The ESM-3 feature cache is 33.4 GB for the 167-gene panel and is deliberately
+# excluded from this release. Point this at wherever you regenerate it with
+# code/02_extract_esm3_features.py.
+external_feature_cache: features
+
+# ---------------------------------------------------------------------------
+# Analysis parameters (must match the published analysis)
+# ---------------------------------------------------------------------------
+params:
+  clearance_threshold_hours: 5      # >= 5 h  => artemisinin-resistant (label 1)
+  split_train_max_year: 2014        # <= 2014          -> train  (n = 769)
+  split_valid_years: [2015, 2016]   # 2015-2016        -> valid  (n = 315)
+  split_test_min_year: 2017         # >= 2017          -> test   (n = 209)
+  esm3_model: esm3_sm_open_v1       # d_model = 1536, frozen (no fine-tuning)
+  esm3_max_context: 1500            # longer proteins are overlap-tiled
+  rf_n_estimators: 100
+  random_seed: 42
+  n_permutations: 100
+
+# Sample dropped in every upstream script as a TRAC-II duplicate
+excluded_samples: [RCN07860]

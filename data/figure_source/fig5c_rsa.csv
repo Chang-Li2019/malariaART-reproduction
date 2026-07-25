@@ -1,0 +1,13 @@
+# provenance: clone/edit structure read from Fig5.pptx; survival values NOT PRESENT in the source tree. NOTE: the figure labels these edits 'EXO V480L' and 'ATP4 G128R' — confirmed mislabels; the correct edits (Supplementary Tables 8/9) are EXO E415G and ATP4 G1128R.
+# STATUS: MISSING (values)
+background,edit,clone,replicate,rsa_survival_pct
+K13-revertant,Control,Control,,
+K13-revertant,ATP4 G1128R,E1,,
+K13-revertant,ATP4 G1128R,F12,,
+K13-revertant,EXO E415G,A4,,
+K13-revertant,EXO E415G,G2,,
+K13-C580Y,Control,Control,,
+K13-C580Y,ATP4 G1128R,D5,,
+K13-C580Y,ATP4 G1128R,G1A,,
+K13-C580Y,EXO E415G,E7,,
+K13-C580Y,EXO E415G,G1E,,

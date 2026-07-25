@@ -1,0 +1,6 @@
+# provenance: Wilcoxon rank-sum (scipy.stats.ranksums)
+metric,n_reported,n_other,median_reported,median_other,statistic,p_value,stars
+valid_auc,12,155,0.7533,0.5484,3.0396,0.0023688106239064767,**
+valid_aupr,12,155,0.7142,0.5184,3.0148,0.0025712611550572787,**
+test_auc,12,155,0.7735,0.5524,2.6771,0.0074264293687060536,**
+test_aupr,12,155,0.858,0.7455,2.5501,0.010770628493119948,*

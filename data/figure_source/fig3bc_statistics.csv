@@ -1,0 +1,18 @@
+# provenance: scipy.stats.spearmanr
+evidence_type,performance_metric,n,spearman_rho,p_value
+genomic,valid_auc,152,0.3641,4.008563836677166e-06
+genomic,valid_aupr,152,0.3885,7.597375776632507e-07
+genomic,test_auc,152,0.3959,4.446306718575385e-07
+genomic,test_aupr,152,0.4034,2.5629266929682345e-07
+transcriptomic,valid_auc,152,-0.0182,0.8239421636228224
+transcriptomic,valid_aupr,152,-0.026,0.7506812736418957
+transcriptomic,test_auc,152,0.0107,0.896045915761968
+transcriptomic,test_aupr,152,0.0127,0.877024259323647
+functional,valid_auc,152,0.097,0.2343083678965789
+functional,valid_aupr,152,0.0906,0.2670208417065
+functional,test_auc,152,0.1123,0.16830918541458087
+functional,test_aupr,152,0.1039,0.2025662133752376
+combined,valid_auc,152,0.3415,1.6672811832990778e-05
+combined,valid_aupr,152,0.3566,6.513674937809305e-06
+combined,test_auc,152,0.3885,7.56005160730028e-07
+combined,test_aupr,152,0.3904,6.608137055155397e-07

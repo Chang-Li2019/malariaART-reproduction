@@ -1,0 +1,6 @@
+# provenance: Supplementary Table 3; truth = clinical phenotype where available, else RSA
+cohort,n_correct,sample_size,accuracy
+All,31,37,0.8378
+SE Asia,26,28,0.9286
+Africa,24,29,0.8276
+CDC Validate,11,13,0.8462

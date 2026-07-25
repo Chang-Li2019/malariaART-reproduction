@@ -1,0 +1,5 @@
+# provenance: data/raw/metadata/ARTR_metadata.csv + TRAC-I/II phenotype tables via code/cohort.load_labels
+split,period,sensitive,resistant,total
+train,Before 2015,515,254,769
+valid,2015-2016,161,154,315
+test,2017-2018,59,150,209

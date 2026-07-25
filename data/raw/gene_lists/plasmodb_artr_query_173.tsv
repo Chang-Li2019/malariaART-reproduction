@@ -1,0 +1,174 @@
+Gene ID	source_id	Organism	Genomic Location (Gene)	Product Description	Score
+PF3D7_0102200	PF3D7_0102200.1	Plasmodium falciparum 3D7	Pf3D7_01_v3:97,590..103,615(+)	ring-infected erythrocyte surface antigen	2.913
+PF3D7_0104300	PF3D7_0104300.1	Plasmodium falciparum 3D7	Pf3D7_01_v3:188,420..201,324(+)	ubiquitin carboxyl-terminal hydrolase 1, putative	30.86
+PF3D7_0106300	PF3D7_0106300.1	Plasmodium falciparum 3D7	Pf3D7_01_v3:264,487..270,234(-)	calcium-transporting ATPase	15.6
+PF3D7_0112200	PF3D7_0112200.1	Plasmodium falciparum 3D7	Pf3D7_01_v3:463,764..471,891(+)	multidrug resistance-associated protein 1	44.79
+PF3D7_0206800	PF3D7_0206800.1	Plasmodium falciparum 3D7	Pf3D7_02_v3:271,576..274,917(-)	merozoite surface protein 2	2.759
+PF3D7_0211600	PF3D7_0211600.1	Plasmodium falciparum 3D7	Pf3D7_02_v3:467,682..468,518(+)	UDP-N-acetylglucosamine transferase subunit ALG14, putative	2.839
+PF3D7_0212800	PF3D7_0212800.1	Plasmodium falciparum 3D7	Pf3D7_02_v3:526,387..531,923(+)	multidrug efflux pump, putative	11.34
+PF3D7_0217100	PF3D7_0217100.1	Plasmodium falciparum 3D7	Pf3D7_02_v3:707,101..709,839(+)	ATP synthase subunit alpha, mitochondrial	5.81
+PF3D7_0302500	PF3D7_0302500.1	Plasmodium falciparum 3D7	Pf3D7_03_v3:134,486..141,185(+)	cytoadherence linked asexual protein 3.1	2.698
+PF3D7_0302600	PF3D7_0302600.1	Plasmodium falciparum 3D7	Pf3D7_03_v3:141,335..146,155(+)	ABC transporter B family member 4, putative	3.829
+PF3D7_0303600	PF3D7_0303600.1	Plasmodium falciparum 3D7	Pf3D7_03_v3:189,682..190,816(+)	plasmoredoxin	6.514
+PF3D7_0309200	PF3D7_0309200.1	Plasmodium falciparum 3D7	Pf3D7_03_v3:388,943..396,419(-)	aurora-related kinase ARK2, putative	5.461
+PF3D7_0316600	PF3D7_0316600.1	Plasmodium falciparum 3D7	Pf3D7_03_v3:668,469..672,475(-)	formate-nitrite transporter	3.466
+PF3D7_0317100	PF3D7_0317100.1	Plasmodium falciparum 3D7	Pf3D7_03_v3:686,282..689,482(+)	6-cysteine protein B9	0.9887
+PF3D7_0319700	PF3D7_0319700.1	Plasmodium falciparum 3D7	Pf3D7_03_v3:820,232..831,283(+)	ABC transporter I family member 1, putative	4.278
+PF3D7_0321200	PF3D7_0321200.1	Plasmodium falciparum 3D7	Pf3D7_03_v3:886,593..889,386(-)	UDP-N-acetylglucosamine--dolichyl-phosphate N-acetylglucosaminephosphotransferase, putative	8.686
+PF3D7_0321900	PF3D7_0321900.1	Plasmodium falciparum 3D7	Pf3D7_03_v3:921,776..928,618(+)	cyclic amine resistance locus protein	44.79
+PF3D7_0403500	PF3D7_0403500.1	Plasmodium falciparum 3D7	Pf3D7_04_v3:195,272..196,988(+)	ubiquitin-specific protease	8.576
+PF3D7_0409300	PF3D7_0409300.1	Plasmodium falciparum 3D7	Pf3D7_04_v3:440,536..445,079(-)	methyltransferase, putative	7.402
+PF3D7_0417200	PF3D7_0417200.1	Plasmodium falciparum 3D7	Pf3D7_04_v3:747,897..750,065(+)	bifunctional dihydrofolate reductase-thymidylate synthase	18.26
+PF3D7_0417400	PF3D7_0417400.1	Plasmodium falciparum 3D7	Pf3D7_04_v3:755,176..777,060(+)	conserved Plasmodium protein, unknown function	8.832
+PF3D7_0422000	PF3D7_0422000.1	Plasmodium falciparum 3D7	Pf3D7_04_v3:997,886..1,000,908(+)	steroid dehydrogenase, putative	6.827
+PF3D7_0505300	PF3D7_0505300.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:233,139..235,836(+)	UDP-N-acetylglucosamine transporter, putative	8.161
+PF3D7_0505500	PF3D7_0505500.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:238,878..243,954(-)	DNA mismatch repair protein MSH6, putative	5.382
+PF3D7_0508300	PF3D7_0508300.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:340,652..344,452(+)	triose phosphate transporter	8.666
+PF3D7_0509800	PF3D7_0509800.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:409,403..415,758(+)	phosphatidylinositol 4-kinase beta	9.913
+PF3D7_0511000	PF3D7_0511000.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:467,139..468,451(-)	translationally-controlled tumor protein homolog	5.371
+PF3D7_0515300	PF3D7_0515300.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:628,784..635,412(+)	phosphatidylinositol 3-kinase	23.72
+PF3D7_0516500	PF3D7_0516500.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:683,708..685,859(+)	major facilitator superfamily domain-containing protein, putative	11.7
+PF3D7_0522600	PF3D7_0522600.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:939,097..942,014(+)	magnesium transporter NIPA, putative	8.47
+PF3D7_0523000	PF3D7_0523000.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:955,955..963,095(+)	multidrug resistance protein 1	56.63
+PF3D7_0528100	PF3D7_0528100.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:1,157,507..1,162,257(-)	AP-1/2 complex subunit beta, putative	7.662
+PF3D7_0530200	PF3D7_0530200.1	Plasmodium falciparum 3D7	Pf3D7_05_v3:1,229,052..1,231,469(-)	phosphoenolpyruvate/phosphate translocator	8.666
+PF3D7_0603300	PF3D7_0603300.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:130,191..132,792(-)	dihydroorotate dehydrogenase	2.698
+PF3D7_0604700	PF3D7_0604700.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:204,545..206,720(-)	glyoxalase I-like protein GILP	12.49
+PF3D7_0605300	PF3D7_0605300.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:222,150..224,529(+)	aurora-related kinase ARK1	5.461
+PF3D7_0606000	PF3D7_0606000.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:249,666..255,695(-)	protein KIC1	12.85
+PF3D7_0609700	PF3D7_0609700.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:412,443..420,258(+)	protein KIC6	12.85
+PF3D7_0612300	PF3D7_0612300.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:520,410..521,138(+)	transmembrane protein 234, putative	8.802
+PF3D7_0615500	PF3D7_0615500.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:642,699..646,241(+)	cdc2-related protein kinase 5	5.929
+PF3D7_0616200	PF3D7_0616200.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:674,071..676,647(+)	kinetochore protein NDC80	4.544
+PF3D7_0616900	PF3D7_0616900.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:698,792..704,220(+)	conserved Plasmodium protein, unknown function	8.832
+PF3D7_0623200	PF3D7_0623200.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:945,100..947,629(+)	ferredoxin--NADP reductase	9.482
+PF3D7_0628200	PF3D7_0628200.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:1,158,605..1,169,668(+)	eukaryotic translation initiation factor 2-alpha kinase	5.371
+PF3D7_0629500	PF3D7_0629500.1	Plasmodium falciparum 3D7	Pf3D7_06_v3:1,213,102..1,217,313(-)	amino acid transporter AAT1	6.103
+PF3D7_0702200	PF3D7_0702200.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:91,731..95,602(-)	lysophospholipase LPL20	5.024
+PF3D7_0703200	PF3D7_0703200.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:122,013..127,441(-)	conserved Plasmodium protein, unknown function	9.979
+PF3D7_0705900	PF3D7_0705900.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:289,460..291,545(-)	ATP synthase subunit C, putative	9.893
+PF3D7_0706700	PF3D7_0706700.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:322,907..325,528(+)	DNA mismatch repair protein MSH2, putative	8.912
+PF3D7_0708600	PF3D7_0708600.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:389,473..390,365(-)	inner membrane complex protein 1d, putative	7.402
+PF3D7_0708700	PF3D7_0708700.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:390,832..392,770(-)	cytochrome c oxidase subunit 4, putative	9.994
+PF3D7_0708800	PF3D7_0708800.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:393,813..399,112(+)	heat shock protein 110	7.758
+PF3D7_0708900	PF3D7_0708900.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:398,963..400,872(-)	protein SCO1, putative	9.994
+PF3D7_0709000	PF3D7_0709000.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:402,385..406,341(+)	chloroquine resistance transporter	57.43
+PF3D7_0709100	PF3D7_0709100.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:407,818..412,040(+)	Cg1 protein	9.493
+PF3D7_0709300	PF3D7_0709300.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:413,560..422,436(-)	mediator of RNA polymerase II transcription subunit 14, putative	9.092
+PF3D7_0709400	PF3D7_0709400.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:422,674..427,278(-)	Cg7 protein	9.781
+PF3D7_0709700	PF3D7_0709700.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:434,748..436,518(-)	prodrug activation and resistance esterase	44.79
+PF3D7_0715500	PF3D7_0715500.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:689,176..690,393(-)	ATP synthase subunit epsilon, mitochondrial, putative	5.81
+PF3D7_0715800	PF3D7_0715800.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:695,091..697,180(-)	drug/metabolite transporter DMT1, putative	9.015
+PF3D7_0716900	PF3D7_0716900.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:734,609..737,460(+)	drug/metabolite transporter DMT2	10.35
+PF3D7_0728000	PF3D7_0728000.1	Plasmodium falciparum 3D7	Pf3D7_07_v3:1,190,698..1,192,848(-)	eukaryotic translation initiation factor 2 subunit alpha	7.153
+PF3D7_0802200	PF3D7_0802200.1	Plasmodium falciparum 3D7	Pf3D7_08_v3:164,729..166,701(+)	1-cys peroxiredoxin	4.544
+PF3D7_0806400	PF3D7_0806400.1	Plasmodium falciparum 3D7	Pf3D7_08_v3:344,038..345,365(+)	UDP-N-acetylglucosamine transferase subunit ALG13, putative	3.007
+PF3D7_0807700	PF3D7_0807700.1	Plasmodium falciparum 3D7	Pf3D7_08_v3:395,356..399,048(-)	serine protease DegP	11.57
+PF3D7_0810800	PF3D7_0810800.1	Plasmodium falciparum 3D7	Pf3D7_08_v3:547,896..551,057(+)	hydroxymethyldihydropterin pyrophosphokinase-dihydropteroate synthase	19.14
+PF3D7_0812100	PF3D7_0812100.1	Plasmodium falciparum 3D7	Pf3D7_08_v3:604,520..613,359(+)	proteasome activator complex subunit 4, putative	7.852
+PF3D7_0813000	PF3D7_0813000.1	Plasmodium falciparum 3D7	Pf3D7_08_v3:643,066..645,158(-)	protein KIC7	24.52
+PF3D7_0813700	PF3D7_0813700.1	Plasmodium falciparum 3D7	Pf3D7_08_v3:670,741..675,700(-)	ABC transporter F family member 1	7.076
+PF3D7_0816600	PF3D7_0816600.1	Plasmodium falciparum 3D7	Pf3D7_08_v3:761,600..765,908(-)	chaperone protein ClpB1	6.466
+PF3D7_0823300	PF3D7_0823300.1	Plasmodium falciparum 3D7	Pf3D7_08_v3:1,028,410..1,034,211(+)	histone acetyltransferase GCN5	9.482
+PF3D7_0914400	PF3D7_0914400.1	Plasmodium falciparum 3D7	Pf3D7_09_v3:617,808..619,842(+)	protein KIC3	12.85
+PF3D7_0918600	PF3D7_0918600.1	Plasmodium falciparum 3D7	Pf3D7_09_v3:764,429..767,461(+)	ATP-dependent DNA helicase Q1	6.315
+PF3D7_0918900	PF3D7_0918900.1	Plasmodium falciparum 3D7	Pf3D7_09_v3:775,058..780,804(+)	gamma-glutamylcysteine synthetase	6.926
+PF3D7_0930300	PF3D7_0930300.1	Plasmodium falciparum 3D7	Pf3D7_09_v3:1,201,305..1,207,576(+)	merozoite surface protein 1	2.647
+PF3D7_0936700	PF3D7_0936700.1	Plasmodium falciparum 3D7	Pf3D7_09_v3:1,454,422..1,455,720(+)	lysophospholipase, putative	5.358
+PF3D7_0937200	PF3D7_0937200.1	Plasmodium falciparum 3D7	Pf3D7_09_v3:1,471,599..1,473,298(+)	lysophospholipase, putative	5.358
+PF3D7_1008600	PF3D7_1008600.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:357,345..358,463(+)	zinc finger (CCCH type) protein, putative	6.662
+PF3D7_1012900	PF3D7_1012900.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:495,293..499,172(-)	autophagy-related protein 18	15.38
+PF3D7_1014900	PF3D7_1014900.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:600,950..608,809(-)	protein KIC8	14.98
+PF3D7_1017400	PF3D7_1017400.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:697,137..700,274(-)	phosphomannomutase	4.431
+PF3D7_1022600	PF3D7_1022600.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:948,397..952,528(+)	kelch protein K10	14.98
+PF3D7_1025000	PF3D7_1025000.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:1,045,271..1,051,309(-)	Eps15-like protein	14.98
+PF3D7_1036300	PF3D7_1036300.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:1,432,498..1,434,786(+)	duffy binding-like merozoite surface protein 2	3.165
+PF3D7_1036400	PF3D7_1036400.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:1,436,316..1,439,804(+)	liver stage antigen 1	4.544
+PF3D7_1036800	PF3D7_1036800.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:1,447,919..1,451,772(-)	acetyl-CoA transporter 1, putative	10.54
+PF3D7_1038900	PF3D7_1038900.1	Plasmodium falciparum 3D7	Pf3D7_10_v3:1,561,978..1,564,670(+)	esterase, putative	5.358
+PF3D7_1103800	PF3D7_1103800.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:162,259..174,387(+)	CCR4-NOT transcription complex subunit NOT1-G, putative	5.714
+PF3D7_1107400	PF3D7_1107400.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:317,615..319,552(-)	DNA repair protein RAD51	17.43
+PF3D7_1113300	PF3D7_1113300.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:518,688..520,690(+)	UDP-galactose transporter, putative	12
+PF3D7_1113700	PF3D7_1113700.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:529,103..530,687(+)	glyoxalase I	11.86
+PF3D7_1115700	PF3D7_1115700.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:591,136..594,805(-)	cysteine proteinase falcipain 2a	5.82
+PF3D7_1117200	PF3D7_1117200.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:654,762..660,420(+)	conserved Plasmodium protein, unknown function	5.81
+PF3D7_1119600	PF3D7_1119600.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:738,041..742,201(-)	ATP-dependent zinc metalloprotease FTSH, putative	5.81
+PF3D7_1121600	PF3D7_1121600.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:814,343..818,094(-)	exported protein 1	10.12
+PF3D7_1121700	PF3D7_1121700.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:818,268..822,945(+)	protein GCN20	6.369
+PF3D7_1122500	PF3D7_1122500.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:852,985..859,371(+)	protein KIC10	16.71
+PF3D7_1129100	PF3D7_1129100.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,124,682..1,128,048(+)	parasitophorous vacuolar protein 1	3.639
+PF3D7_1132400	PF3D7_1132400.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,254,662..1,260,426(-)	transporter, putative	8.802
+PF3D7_1136600	PF3D7_1136600.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,440,742..1,445,784(+)	modulator of ring stage translation MRST	9.963
+PF3D7_1137400	PF3D7_1137400.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,470,103..1,472,480(-)	regulator of chromosome condensation, putative	12.33
+PF3D7_1138300	PF3D7_1138300.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,498,612..1,499,571(-)	conserved protein, unknown function	9.552
+PF3D7_1138700	PF3D7_1138700.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,525,654..1,532,527(-)	protein KIC5	17.61
+PF3D7_1145500	PF3D7_1145500.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,807,031..1,810,365(+)	ABC transporter B family member 3, putative	6.369
+PF3D7_1147000	PF3D7_1147000.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,858,329..1,867,357(-)	sporozoite and liver stage asparagine-rich protein	2.204
+PF3D7_1147500	PF3D7_1147500.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,889,494..1,892,695(-)	protein farnesyltransferase subunit beta	4.278
+PF3D7_1147700	PF3D7_1147700.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,896,443..1,898,242(+)	ATP synthase subunit delta, mitochondrial, putative	6.909
+PF3D7_1149200	PF3D7_1149200.1	Plasmodium falciparum 3D7	Pf3D7_11_v3:1,975,705..1,980,325(+)	ring-infected erythrocyte surface antigen	6.312
+PF3D7_1209600	PF3D7_1209600.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:443,680..445,148(+)	porphobilinogen deaminase	7.276
+PF3D7_1209900	PF3D7_1209900.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:448,322..451,568(-)	ABC transporter B family member 7, putative	10.75
+PF3D7_1211900	PF3D7_1211900.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:527,829..533,965(-)	non-SERCA-type Ca2+ -transporting P-ATPase	12.7
+PF3D7_1213800	PF3D7_1213800.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:589,729..593,777(-)	proline--tRNA ligase	10.44
+PF3D7_1218300	PF3D7_1218300.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:716,700..720,665(+)	AP-2 complex subunit mu	18.32
+PF3D7_1219100	PF3D7_1219100.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:757,218..764,201(+)	clathrin heavy chain, putative	6.708
+PF3D7_1227700	PF3D7_1227700.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:1,128,715..1,133,372(-)	protein KIC2	14.98
+PF3D7_1229100	PF3D7_1229100.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:1,192,185..1,202,986(-)	multidrug resistance-associated protein 2	44.79
+PF3D7_1235400	PF3D7_1235400.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:1,476,470..1,480,044(-)	tetQ family GTPase, putative	7.758
+PF3D7_1235700	PF3D7_1235700.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:1,486,145..1,489,166(+)	ATP synthase subunit beta, mitochondrial	4.041
+PF3D7_1238800	PF3D7_1238800.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:1,608,501..1,614,434(+)	acyl-CoA synthetase	11.99
+PF3D7_1239700	PF3D7_1239700.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:1,654,438..1,658,821(+)	ATP-dependent zinc metalloprotease FTSH 1	5.587
+PF3D7_1242600	PF3D7_1242600.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:1,800,215..1,802,786(+)	protein farnesyltransferase subunit alpha	6.05
+PF3D7_1246300	PF3D7_1246300.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:1,925,058..1,929,618(+)	protein KIC4	16.71
+PF3D7_1251200	PF3D7_1251200.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:2,091,731..2,094,720(+)	coronin	29.92
+PF3D7_1252600	PF3D7_1252600.1	Plasmodium falciparum 3D7	Pf3D7_12_v3:2,147,509..2,152,520(+)	esterase, putative	5.587
+PF3D7_1302700	PF3D7_1302700.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:144,689..150,561(+)	ATP-dependent RNA helicase DHR1, putative	3.007
+PF3D7_1303500	PF3D7_1303500.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:169,481..178,156(-)	sodium/hydrogen exchanger	7.883
+PF3D7_1310000	PF3D7_1310000.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:448,789..449,862(+)	ATP synthase subunit O, mitochondrial, putative	5.81
+PF3D7_1311300	PF3D7_1311300.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:484,029..485,471(+)	ATP synthase subunit gamma, mitochondrial	5.81
+PF3D7_1313800	PF3D7_1313800.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:588,141..599,917(-)	conserved Plasmodium membrane protein, unknown function	8.582
+PF3D7_1318100	PF3D7_1318100.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:748,160..749,415(-)	ferredoxin	9.01
+PF3D7_1318300	PF3D7_1318300.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:752,413..759,638(+)	conserved Plasmodium protein, unknown function	8.28
+PF3D7_1324400	PF3D7_1324400.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:1,021,423..1,023,251(+)	PRELI domain-containing protein, putative	9.851
+PF3D7_1335900	PF3D7_1335900.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:1,464,895..1,466,619(-)	thrombospondin-related anonymous protein	0.7057
+PF3D7_1339900	PF3D7_1339900.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:1,598,111..1,601,567(+)	ABC transporter B family member 5, putative	6.369
+PF3D7_1342900	PF3D7_1342900.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:1,682,054..1,694,167(-)	AP2 domain transcription factor AP2-HS	17.13
+PF3D7_1343600	PF3D7_1343600.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:1,721,704..1,724,056(-)	UDP-N-acetylglucosamine pyrophosphorylase, putative	4.431
+PF3D7_1343700	PF3D7_1343700.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:1,724,600..1,727,877(-)	kelch protein K13	33.68
+PF3D7_1343800	PF3D7_1343800.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:1,730,093..1,753,967(-)	VPS13 domain-containing protein, putative	9.726
+PF3D7_1347500	PF3D7_1347500.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:1,896,562..1,903,155(-)	DNA/RNA-binding protein Alba 4	2.837
+PF3D7_1352100	PF3D7_1352100.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:2,075,535..2,079,893(-)	ABC transporter B family member 6, putative	4.846
+PF3D7_1356600	PF3D7_1356600.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:2,240,792..2,243,672(-)	regulator of chromosome condensation, putative	7.758
+PF3D7_1359900	PF3D7_1359900.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:2,395,314..2,402,848(+)	quinoxaline resistance protein QRP1	49
+PF3D7_1362500	PF3D7_1362500.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:2,502,730..2,505,875(+)	3'-5' exonuclease, putative	12
+PF3D7_1368200	PF3D7_1368200.1	Plasmodium falciparum 3D7	Pf3D7_13_v3:2,713,313..2,717,072(-)	ABC transporter E family member 1, putative	9.05
+PF3D7_1401500	PF3D7_1401500.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:56,497..59,127(-)	esterase, putative	5.358
+PF3D7_1406900	PF3D7_1406900.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:250,334..252,921(+)	radical SAM protein, putative	4.9
+PF3D7_1408000	PF3D7_1408000.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:292,244..295,261(+)	plasmepsin II	11.91
+PF3D7_1408100	PF3D7_1408100.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:296,683..299,101(+)	plasmepsin III	3.309
+PF3D7_1409300	PF3D7_1409300.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:362,619..364,640(+)	DNA damage-inducible protein 1	10.2
+PF3D7_1412800	PF3D7_1412800.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:515,932..519,380(-)	glycylpeptide N-tetradecanoyltransferase	4.544
+PF3D7_1413500	PF3D7_1413500.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:536,446..538,247(-)	iron-sulfur cluster assembly protein SufC	4.041
+PF3D7_1427500	PF3D7_1427500.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,081,038..1,084,631(+)	DNA mismatch repair protein MSH2, putative	4.544
+PF3D7_1431400	PF3D7_1431400.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,232,648..1,237,614(-)	surface-related antigen SRA	5.587
+PF3D7_1434000	PF3D7_1434000.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,364,611..1,366,364(-)	CCR4-associated factor 16, putative	4.544
+PF3D7_1435500	PF3D7_1435500.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,435,333..1,437,346(+)	clathrin light chain, putative	9.738
+PF3D7_1436600	PF3D7_1436600.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,490,321..1,494,453(-)	cGMP-dependent protein kinase	3.057
+PF3D7_1438900	PF3D7_1438900.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,575,439..1,577,046(+)	thioredoxin peroxidase 1	4.544
+PF3D7_1442400	PF3D7_1442400.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,716,954..1,724,336(+)	protein KIC9	14.98
+PF3D7_1442900	PF3D7_1442900.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,752,543..1,764,248(+)	Sec7 domain-containing protein ARFGEF, putative	7.035
+PF3D7_1447900	PF3D7_1447900.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,953,474..1,959,147(-)	multidrug resistance protein 2	49
+PF3D7_1448600	PF3D7_1448600.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:1,997,036..1,998,336(-)	SNARE protein, putative	7.402
+PF3D7_1452700	PF3D7_1452700.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:2,167,219..2,169,997(+)	U1 snRNP-associated protein, putative	7.665
+PF3D7_1455200	PF3D7_1455200.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:2,253,099..2,257,505(+)	methyltransferase AAMT	7.402
+PF3D7_1462800	PF3D7_1462800.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:2,558,055..2,560,979(+)	glyceraldehyde-3-phosphate dehydrogenase	11.88
+PF3D7_1467400	PF3D7_1467400.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:2,752,541..2,754,593(-)	50S ribosomal protein L22, apicoplast, putative	6.597
+PF3D7_1468600	PF3D7_1468600.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:2,816,100..2,822,286(+)	aminophospholipid transporter, putative	5.81
+PF3D7_1468900	PF3D7_1468900.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:2,831,386..2,834,620(-)	zinc finger protein, putative	7.607
+PF3D7_1470800	PF3D7_1470800.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:2,892,097..2,896,218(-)	conserved Plasmodium protein, unknown function	8.597
+PF3D7_1476100	PF3D7_1476100.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:3,131,104..3,131,637(+)	early transcribed membrane protein 14.2	4.544
+PF3D7_1476700	PF3D7_1476700.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:3,156,572..3,158,056(+)	lysophospholipase LPL1	5.024
+PF3D7_1476800	PF3D7_1476800.1	Plasmodium falciparum 3D7	Pf3D7_14_v3:3,159,438..3,160,837(+)	lysophospholipase LPL3	5.024
+PF3D7_API01300	PF3D7_API01300.1	Plasmodium falciparum 3D7	Pf3D7_API_v3:1,667..2,239(+)	50S ribosomal protein L4, putative	11.93
+PF3D7_MIT02300	PF3D7_MIT02300.1	Plasmodium falciparum 3D7	Pf3D7_MIT_v3:3,492..4,622(+)	cytochrome b	8.164

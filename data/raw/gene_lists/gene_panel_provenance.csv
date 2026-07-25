@@ -1,0 +1,193 @@
+gene_id,in_plasmodb_query,chromosomal,in_kucharski_review,in_analysed_panel,sequence_shipped,membership_reason,gene_symbol,product_description
+PF3D7_0102200,True,True,False,True,True,retained from PlasmoDB query,RESA,ring-infected erythrocyte surface antigen
+PF3D7_0104300,True,True,True,True,True,retained from PlasmoDB query,UBP1,"ubiquitin carboxyl-terminal hydrolase 1, putative"
+PF3D7_0106300,True,True,False,False,False,excluded: reason not documented in Methods,,calcium-transporting ATPase
+PF3D7_0112200,True,True,False,False,False,excluded: reason not documented in Methods,,multidrug resistance-associated protein 1
+PF3D7_0206800,True,True,False,True,True,retained from PlasmoDB query,MSP2,merozoite surface protein 2
+PF3D7_0211600,True,True,False,True,True,retained from PlasmoDB query,ALG14,"UDP-N-acetylglucosamine transferase subunit ALG14, putative"
+PF3D7_0212800,True,True,False,True,True,retained from PlasmoDB query,MATE,"multidrug efflux pump, putative"
+PF3D7_0217100,True,True,False,True,True,retained from PlasmoDB query,nan,"ATP synthase subunit alpha, mitochondrial"
+PF3D7_0302500,True,True,False,True,True,retained from PlasmoDB query,CLAG3.1,cytoadherence linked asexual protein 3.1
+PF3D7_0302600,True,True,False,False,False,excluded: reason not documented in Methods,,"ABC transporter B family member 4, putative"
+PF3D7_0303600,True,True,False,True,True,retained from PlasmoDB query,Plrx,plasmoredoxin
+PF3D7_0309200,True,True,False,True,True,retained from PlasmoDB query,ARK2,"aurora-related kinase ARK2, putative"
+PF3D7_0316600,True,True,False,True,True,retained from PlasmoDB query,FNT,formate-nitrite transporter
+PF3D7_0317100,True,True,False,True,True,retained from PlasmoDB query,B9,6-cysteine protein B9
+PF3D7_0319700,True,True,False,False,False,excluded: reason not documented in Methods,,"ABC transporter I family member 1, putative"
+PF3D7_0321200,True,True,False,True,True,retained from PlasmoDB query,ALG7,"UDP-N-acetylglucosamine--dolichyl-phosphate N-acetylglucosaminephosphotransferase, putative"
+PF3D7_0321900,True,True,False,True,True,retained from PlasmoDB query,CARL,cyclic amine resistance locus protein
+PF3D7_0403500,True,True,False,True,True,retained from PlasmoDB query,USP,ubiquitin-specific protease
+PF3D7_0409300,True,True,False,False,False,excluded: reason not documented in Methods,,"methyltransferase, putative"
+PF3D7_0417200,True,True,False,False,False,excluded: reason not documented in Methods,,bifunctional dihydrofolate reductase-thymidylate synthase
+PF3D7_0417400,True,True,False,False,False,excluded: reason not documented in Methods,,"conserved Plasmodium protein, unknown function"
+PF3D7_0419900,False,True,True,True,True,added: literature ART-R gene (Kucharski review),nan,
+PF3D7_0422000,True,True,False,True,True,retained from PlasmoDB query,nan,"steroid dehydrogenase, putative"
+PF3D7_0505300,True,True,False,True,True,retained from PlasmoDB query,nan,"UDP-N-acetylglucosamine transporter, putative"
+PF3D7_0505500,True,True,False,True,True,retained from PlasmoDB query,MSH6,"DNA mismatch repair protein MSH6, putative"
+PF3D7_0508300,True,True,False,True,True,retained from PlasmoDB query,TPT,triose phosphate transporter
+PF3D7_0509800,True,True,False,True,True,retained from PlasmoDB query,PI4KB,phosphatidylinositol 4-kinase beta
+PF3D7_0511000,True,True,False,True,True,retained from PlasmoDB query,TCTP,translationally-controlled tumor protein homolog
+PF3D7_0515300,True,True,False,False,False,excluded: reason not documented in Methods,,phosphatidylinositol 3-kinase
+PF3D7_0516500,True,True,False,True,True,retained from PlasmoDB query,MFS1,"major facilitator superfamily domain-containing protein, putative"
+PF3D7_0522600,True,True,False,True,True,retained from PlasmoDB query,nan,"magnesium transporter NIPA, putative"
+PF3D7_0523000,True,True,False,True,True,retained from PlasmoDB query,MDR1,multidrug resistance protein 1
+PF3D7_0528100,True,True,False,True,True,retained from PlasmoDB query,nan,"AP-1/2 complex subunit beta, putative"
+PF3D7_0530200,True,True,False,True,True,retained from PlasmoDB query,PPT,phosphoenolpyruvate/phosphate translocator
+PF3D7_0603300,True,True,False,True,True,retained from PlasmoDB query,DHODH,dihydroorotate dehydrogenase
+PF3D7_0604700,True,True,False,True,True,retained from PlasmoDB query,GILP,glyoxalase I-like protein GILP
+PF3D7_0605300,True,True,False,True,True,retained from PlasmoDB query,ARK1,aurora-related kinase ARK1
+PF3D7_0606000,True,True,False,True,True,retained from PlasmoDB query,KIC1,protein KIC1
+PF3D7_0609700,True,True,False,True,True,retained from PlasmoDB query,KIC6,protein KIC6
+PF3D7_0612300,True,True,False,True,True,retained from PlasmoDB query,TMEM234,"transmembrane protein 234, putative"
+PF3D7_0615500,True,True,False,True,True,retained from PlasmoDB query,CRK5,cdc2-related protein kinase 5
+PF3D7_0616200,True,True,False,True,True,retained from PlasmoDB query,NDC80,kinetochore protein NDC80
+PF3D7_0616900,True,True,False,True,True,retained from PlasmoDB query,nan,"conserved Plasmodium protein, unknown function"
+PF3D7_0623200,True,True,False,True,True,retained from PlasmoDB query,FNR,ferredoxin--NADP reductase
+PF3D7_0628200,True,True,False,True,True,retained from PlasmoDB query,PK4,eukaryotic translation initiation factor 2-alpha kinase
+PF3D7_0629500,True,True,False,True,True,retained from PlasmoDB query,AAT1,amino acid transporter AAT1
+PF3D7_0702200,True,True,False,True,True,retained from PlasmoDB query,LPL20,lysophospholipase LPL20
+PF3D7_0703200,True,True,False,False,False,excluded: reason not documented in Methods,,"conserved Plasmodium protein, unknown function"
+PF3D7_0705900,True,True,False,True,True,retained from PlasmoDB query,nan,"ATP synthase subunit C, putative"
+PF3D7_0706700,True,True,False,True,True,retained from PlasmoDB query,MSH2-2,"DNA mismatch repair protein MSH2, putative"
+PF3D7_0708600,True,True,False,True,True,retained from PlasmoDB query,IMC1d,"inner membrane complex protein 1d, putative"
+PF3D7_0708700,True,True,False,True,True,retained from PlasmoDB query,COX4,"cytochrome c oxidase subunit 4, putative"
+PF3D7_0708800,True,True,False,True,True,retained from PlasmoDB query,HSP110c,heat shock protein 110
+PF3D7_0708900,True,True,False,True,True,retained from PlasmoDB query,SCO1,"protein SCO1, putative"
+PF3D7_0709000,True,True,True,True,True,retained from PlasmoDB query,CRT,chloroquine resistance transporter
+PF3D7_0709100,True,True,False,True,True,retained from PlasmoDB query,nan,Cg1 protein
+PF3D7_0709300,True,True,False,True,True,retained from PlasmoDB query,MED14,"mediator of RNA polymerase II transcription subunit 14, putative"
+PF3D7_0709400,True,True,False,True,True,retained from PlasmoDB query,nan,Cg7 protein
+PF3D7_0709700,True,True,False,True,True,retained from PlasmoDB query,PARE,prodrug activation and resistance esterase
+PF3D7_0715500,True,True,False,True,True,retained from PlasmoDB query,nan,"ATP synthase subunit epsilon, mitochondrial, putative"
+PF3D7_0715800,True,True,False,True,True,retained from PlasmoDB query,DMT1,"drug/metabolite transporter DMT1, putative"
+PF3D7_0716900,True,True,False,True,True,retained from PlasmoDB query,DMT2,drug/metabolite transporter DMT2
+PF3D7_0720700,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),PX1,
+PF3D7_0728000,True,True,False,True,True,retained from PlasmoDB query,eIF2alpha,eukaryotic translation initiation factor 2 subunit alpha
+PF3D7_0801700,False,True,True,True,True,added: literature ART-R gene (Kucharski review),SENP2,
+PF3D7_0802200,True,True,False,True,True,retained from PlasmoDB query,1-CysPxn,1-cys peroxiredoxin
+PF3D7_0806400,True,True,False,True,True,retained from PlasmoDB query,ALG13,"UDP-N-acetylglucosamine transferase subunit ALG13, putative"
+PF3D7_0807700,True,True,False,True,True,retained from PlasmoDB query,DegP,serine protease DegP
+PF3D7_0810800,True,True,False,True,True,retained from PlasmoDB query,PPPK-DHPS,hydroxymethyldihydropterin pyrophosphokinase-dihydropteroate synthase
+PF3D7_0812100,True,True,False,True,True,retained from PlasmoDB query,nan,"proteasome activator complex subunit 4, putative"
+PF3D7_0813000,True,True,False,True,True,retained from PlasmoDB query,KIC7,protein KIC7
+PF3D7_0813700,True,True,False,True,True,retained from PlasmoDB query,ABCF1,ABC transporter F family member 1
+PF3D7_0816600,True,True,False,True,True,retained from PlasmoDB query,ClpB1,chaperone protein ClpB1
+PF3D7_0823300,True,True,False,True,True,retained from PlasmoDB query,GCN5,histone acetyltransferase GCN5
+PF3D7_0914400,True,True,False,True,True,retained from PlasmoDB query,KIC3,protein KIC3
+PF3D7_0918600,True,True,False,True,True,retained from PlasmoDB query,RECQ1,ATP-dependent DNA helicase Q1
+PF3D7_0918900,True,True,False,True,True,retained from PlasmoDB query,gammaGCS,gamma-glutamylcysteine synthetase
+PF3D7_0930300,True,True,False,False,False,excluded: reason not documented in Methods,,merozoite surface protein 1
+PF3D7_0936700,True,True,False,True,True,retained from PlasmoDB query,nan,"lysophospholipase, putative"
+PF3D7_0937200,True,True,False,False,False,excluded: reason not documented in Methods,,"lysophospholipase, putative"
+PF3D7_1008600,True,True,False,True,True,retained from PlasmoDB query,nan,"zinc finger (CCCH type) protein, putative"
+PF3D7_1012900,True,True,True,True,True,retained from PlasmoDB query,ATG18,autophagy-related protein 18
+PF3D7_1014900,True,True,False,True,True,retained from PlasmoDB query,KIC8,protein KIC8
+PF3D7_1017400,True,True,False,True,True,retained from PlasmoDB query,HAD5,phosphomannomutase
+PF3D7_1022600,True,True,False,True,True,retained from PlasmoDB query,Kelch10,kelch protein K10
+PF3D7_1025000,True,True,False,True,True,retained from PlasmoDB query,EPS15,Eps15-like protein
+PF3D7_1036300,True,True,False,True,True,retained from PlasmoDB query,DBLMSP2,duffy binding-like merozoite surface protein 2
+PF3D7_1036400,True,True,False,True,True,retained from PlasmoDB query,LSA1,liver stage antigen 1
+PF3D7_1036800,True,True,False,True,True,retained from PlasmoDB query,AT1,"acetyl-CoA transporter 1, putative"
+PF3D7_1038900,True,True,False,False,False,excluded: reason not documented in Methods,,"esterase, putative"
+PF3D7_1103800,True,True,False,False,False,excluded: reason not documented in Methods,,"CCR4-NOT transcription complex subunit NOT1-G, putative"
+PF3D7_1107400,True,True,False,True,True,retained from PlasmoDB query,RAD51,DNA repair protein RAD51
+PF3D7_1113300,True,True,False,True,True,retained from PlasmoDB query,UGT,"UDP-galactose transporter, putative"
+PF3D7_1113700,True,True,False,True,True,retained from PlasmoDB query,GLO1,glyoxalase I
+PF3D7_1115600,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),CYP19B,
+PF3D7_1115700,True,True,False,True,True,retained from PlasmoDB query,FP2A,cysteine proteinase falcipain 2a
+PF3D7_1117200,True,True,False,True,True,retained from PlasmoDB query,nan,"conserved Plasmodium protein, unknown function"
+PF3D7_1119600,True,True,False,True,True,retained from PlasmoDB query,nan,"ATP-dependent zinc metalloprotease FTSH, putative"
+PF3D7_1121600,True,True,False,True,True,retained from PlasmoDB query,EXP1,exported protein 1
+PF3D7_1121700,True,True,False,True,True,retained from PlasmoDB query,GCN20,protein GCN20
+PF3D7_1122500,True,True,False,True,True,retained from PlasmoDB query,KIC10,protein KIC10
+PF3D7_1129100,True,True,False,True,True,retained from PlasmoDB query,PV1,parasitophorous vacuolar protein 1
+PF3D7_1132400,True,True,False,True,True,retained from PlasmoDB query,nan,"transporter, putative"
+PF3D7_1136600,True,True,False,True,True,retained from PlasmoDB query,MRST,modulator of ring stage translation MRST
+PF3D7_1137400,True,True,False,True,True,retained from PlasmoDB query,nan,"regulator of chromosome condensation, putative"
+PF3D7_1138300,True,True,False,True,True,retained from PlasmoDB query,nan,"conserved protein, unknown function"
+PF3D7_1138700,True,True,False,False,False,excluded: reason not documented in Methods,,protein KIC5
+PF3D7_1138800,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1145500,True,True,False,True,True,retained from PlasmoDB query,ABCB3,"ABC transporter B family member 3, putative"
+PF3D7_1147000,True,True,False,True,True,retained from PlasmoDB query,SLARP,sporozoite and liver stage asparagine-rich protein
+PF3D7_1147500,True,True,False,False,False,excluded: reason not documented in Methods,,protein farnesyltransferase subunit beta
+PF3D7_1147700,True,True,False,True,True,retained from PlasmoDB query,nan,"ATP synthase subunit delta, mitochondrial, putative"
+PF3D7_1149200,True,True,False,False,False,excluded: reason not documented in Methods,,ring-infected erythrocyte surface antigen
+PF3D7_1209600,True,True,False,True,True,retained from PlasmoDB query,PBGD,porphobilinogen deaminase
+PF3D7_1209900,True,True,False,True,True,retained from PlasmoDB query,ABCB7,"ABC transporter B family member 7, putative"
+PF3D7_1211900,True,True,False,True,True,retained from PlasmoDB query,ATP4,non-SERCA-type Ca2+ -transporting P-ATPase
+PF3D7_1213800,True,True,False,True,True,retained from PlasmoDB query,PRS,proline--tRNA ligase
+PF3D7_1218300,True,True,True,True,True,retained from PlasmoDB query,AP2-MU,AP-2 complex subunit mu
+PF3D7_1219100,True,True,False,True,True,retained from PlasmoDB query,CHC,"clathrin heavy chain, putative"
+PF3D7_1227700,True,True,False,True,True,retained from PlasmoDB query,KIC2,protein KIC2
+PF3D7_1229100,True,True,False,True,True,retained from PlasmoDB query,MRP2,multidrug resistance-associated protein 2
+PF3D7_1235400,True,True,False,True,True,retained from PlasmoDB query,nan,"tetQ family GTPase, putative"
+PF3D7_1235700,True,True,False,True,True,retained from PlasmoDB query,nan,"ATP synthase subunit beta, mitochondrial"
+PF3D7_1238800,True,True,False,True,True,retained from PlasmoDB query,ACS11,acyl-CoA synthetase
+PF3D7_1239700,True,True,False,True,True,retained from PlasmoDB query,FTSH1,ATP-dependent zinc metalloprotease FTSH 1
+PF3D7_1242600,True,True,False,True,True,retained from PlasmoDB query,nan,protein farnesyltransferase subunit alpha
+PF3D7_1246300,True,True,False,False,False,excluded: reason not documented in Methods,,protein KIC4
+PF3D7_1251200,True,True,True,True,True,retained from PlasmoDB query,nan,coronin
+PF3D7_1252600,True,True,False,True,True,retained from PlasmoDB query,nan,"esterase, putative"
+PF3D7_1302700,True,True,False,True,True,retained from PlasmoDB query,nan,"ATP-dependent RNA helicase DHR1, putative"
+PF3D7_1303500,True,True,False,True,True,retained from PlasmoDB query,NHE,sodium/hydrogen exchanger
+PF3D7_1310000,True,True,False,True,True,retained from PlasmoDB query,OSCP,"ATP synthase subunit O, mitochondrial, putative"
+PF3D7_1311300,True,True,False,True,True,retained from PlasmoDB query,nan,"ATP synthase subunit gamma, mitochondrial"
+PF3D7_1313800,True,True,False,False,False,excluded: reason not documented in Methods,,"conserved Plasmodium membrane protein, unknown function"
+PF3D7_1318100,True,True,True,True,True,retained from PlasmoDB query,FD,ferredoxin
+PF3D7_1318300,True,True,False,True,True,retained from PlasmoDB query,nan,"conserved Plasmodium protein, unknown function"
+PF3D7_1322700,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1324400,True,True,False,True,True,retained from PlasmoDB query,PRELID,"PRELI domain-containing protein, putative"
+PF3D7_1335900,True,True,False,True,True,retained from PlasmoDB query,TRAP,thrombospondin-related anonymous protein
+PF3D7_1339900,True,True,False,True,True,retained from PlasmoDB query,ABCB5,"ABC transporter B family member 5, putative"
+PF3D7_1342900,True,True,False,False,False,excluded: reason not documented in Methods,,AP2 domain transcription factor AP2-HS
+PF3D7_1343400,False,True,True,True,True,added: literature ART-R gene (Kucharski review),RAD5,
+PF3D7_1343600,True,True,False,True,True,retained from PlasmoDB query,nan,"UDP-N-acetylglucosamine pyrophosphorylase, putative"
+PF3D7_1343700,True,True,False,True,True,retained from PlasmoDB query,Kelch13,kelch protein K13
+PF3D7_1343800,True,True,False,True,True,retained from PlasmoDB query,nan,"VPS13 domain-containing protein, putative"
+PF3D7_1345400,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1346400,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1347500,True,True,False,True,True,retained from PlasmoDB query,ALBA4,DNA/RNA-binding protein Alba 4
+PF3D7_1349500,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1350900,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),ApiAP2,
+PF3D7_1352100,True,True,False,True,True,retained from PlasmoDB query,ABCB6,"ABC transporter B family member 6, putative"
+PF3D7_1356600,True,True,False,True,True,retained from PlasmoDB query,nan,"regulator of chromosome condensation, putative"
+PF3D7_1359900,True,True,False,False,False,excluded: reason not documented in Methods,,quinoxaline resistance protein QRP1
+PF3D7_1362500,True,True,False,True,True,retained from PlasmoDB query,EXO,"3'-5' exonuclease, putative"
+PF3D7_1368200,True,True,False,False,False,excluded: reason not documented in Methods,,"ABC transporter E family member 1, putative"
+PF3D7_1401500,True,True,False,True,True,retained from PlasmoDB query,nan,"esterase, putative"
+PF3D7_1406900,True,True,False,True,True,retained from PlasmoDB query,RlmN,"radical SAM protein, putative"
+PF3D7_1408000,True,True,False,True,True,retained from PlasmoDB query,PMII,plasmepsin II
+PF3D7_1408100,True,True,False,True,True,retained from PlasmoDB query,PMIII,plasmepsin III
+PF3D7_1409300,True,True,False,True,True,retained from PlasmoDB query,DDI1,DNA damage-inducible protein 1
+PF3D7_1412800,True,True,False,True,True,retained from PlasmoDB query,NMT,glycylpeptide N-tetradecanoyltransferase
+PF3D7_1413500,True,True,False,True,True,retained from PlasmoDB query,SufC,iron-sulfur cluster assembly protein SufC
+PF3D7_1427500,True,True,False,True,True,retained from PlasmoDB query,MSH2-1,"DNA mismatch repair protein MSH2, putative"
+PF3D7_1431400,True,True,False,False,False,excluded: reason not documented in Methods,,surface-related antigen SRA
+PF3D7_1434000,True,True,False,True,True,retained from PlasmoDB query,CAF16,"CCR4-associated factor 16, putative"
+PF3D7_1435500,True,True,False,True,True,retained from PlasmoDB query,CLC,"clathrin light chain, putative"
+PF3D7_1436600,True,True,False,True,True,retained from PlasmoDB query,PKG,cGMP-dependent protein kinase
+PF3D7_1438900,True,True,False,True,True,retained from PlasmoDB query,Trx-Px1,thioredoxin peroxidase 1
+PF3D7_1442400,True,True,False,True,True,retained from PlasmoDB query,KIC9,protein KIC9
+PF3D7_1442900,True,True,False,True,True,retained from PlasmoDB query,ARFGEF,"Sec7 domain-containing protein ARFGEF, putative"
+PF3D7_1447900,True,True,True,True,True,retained from PlasmoDB query,MDR2,multidrug resistance protein 2
+PF3D7_1448400,False,True,True,True,True,added: literature ART-R gene (Kucharski review),HRD3,
+PF3D7_1448600,True,True,False,True,True,retained from PlasmoDB query,VTI1,"SNARE protein, putative"
+PF3D7_1450700,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1450800,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1451000,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1451200,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1452700,True,True,False,True,True,retained from PlasmoDB query,nan,"U1 snRNP-associated protein, putative"
+PF3D7_1455200,True,True,False,True,True,retained from PlasmoDB query,nan,methyltransferase AAMT
+PF3D7_1457200,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),TRX1,
+PF3D7_1460500,False,True,False,True,True,added: literature ART-R gene (not in PlasmoDB query),nan,
+PF3D7_1460900,False,True,True,True,True,added: literature ART-R gene (Kucharski review),ARPS10,
+PF3D7_1462800,True,True,False,True,True,retained from PlasmoDB query,GAPDH,glyceraldehyde-3-phosphate dehydrogenase
+PF3D7_1467400,True,True,False,True,True,retained from PlasmoDB query,RPL22,"50S ribosomal protein L22, apicoplast, putative"
+PF3D7_1468600,True,True,False,True,True,retained from PlasmoDB query,nan,"aminophospholipid transporter, putative"
+PF3D7_1468900,True,True,False,True,True,retained from PlasmoDB query,nan,"zinc finger protein, putative"
+PF3D7_1470800,True,True,False,True,True,retained from PlasmoDB query,nan,"conserved Plasmodium protein, unknown function"
+PF3D7_1476100,True,True,False,True,True,retained from PlasmoDB query,ETRAMP14.2,early transcribed membrane protein 14.2
+PF3D7_1476700,True,True,False,True,True,retained from PlasmoDB query,LPL1,lysophospholipase LPL1
+PF3D7_1476800,True,True,False,False,False,excluded: reason not documented in Methods,,lysophospholipase LPL3
+PF3D7_API01300,True,False,False,False,False,excluded: not on chromosomes 1-14,,"50S ribosomal protein L4, putative"
+PF3D7_MIT02300,True,False,False,False,False,excluded: not on chromosomes 1-14,,cytochrome b

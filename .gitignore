@@ -1,0 +1,18 @@
+# Regenerated ESM-3 feature cache (33.4 GB for the full panel) — see README Tier 2
+features/
+*_features.pkl
+
+# Large shipped result sets: tracked as data, not in git.
+# Distribute the folder itself (or an archive of it), not a clone.
+results/mutagenesis_56genes/dms/
+results/mutagenesis_56genes/rankscore/
+data/raw/sequences/
+
+# Local outputs
+verify/verification_report.csv
+*.log
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store

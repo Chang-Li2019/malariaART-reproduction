@@ -1,0 +1,38 @@
+,WHO Classification,RSA Phenotype (RSA > 1%),Clinical Phenotype(Parasite Clearance Half Life > 5.5),Model Prediction,Reported Regions,RSA Reference,Clinical Reference
+K189T,,Sensitive,Sensitive,Sensitive,"Southeast Asia, South Asia, Africa",Das S. N Engl J Med. 2018; 379:1962–1964.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+R239Q,,Not Available,Sensitive,Sensitive,Southeast Asia,Not Available,Anderson TJ. Mol Biol Evol. 2017; 34:131–144.
+E252Q,,Sensitive (median < 1%),Sensitive (median = 4.6),Sensitive,Southeast Asia,Behrens HM. mBio. 2024; 15:e01981-23.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+D281V,,Not Available,Sensitive (Limited Samples = 3),Sensitive,"Southeast Asia, Africa",Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+K438N,,Not Available,Sensitive,Sensitive,"Southeast Asia, Africa",Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+P441L,Candidate,Not Available,Partial Resistance,Partial Resistance,"Southeast Asia, Africa",Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+F446I,Validate,Partial Resistance,Partial Resistance,Partial Resistance,"Southeast Asia, Africa",Siddiqui FA. mBio. 2020; 11:e00090-20.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+G449A,Candidate,Not Available,Partial Resistance,Partial Resistance,Africa,,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+N458Y,Validate,Partial Resistance,Partial Resistance,Partial Resistance,Southeast Asia,Siddiqui FA. mBio. 2020; 11:e00090-20.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+C469F,Candidate,Partial Resistance,Not Available,Partial Resistance,Africa,van Loon W. Emerg Infect Dis. 2022; 28:852–855.,Not Available
+C469Y,Validate,Partial Resistance,Partial Resistance (Limited Sample = 1),Partial Resistance,Africa,Siddiqui FA. mBio. 2020; 11:e00090-20.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+M476I,Validate,Partial Resistance,Partial Resistance,Sensitive,Africa,Straimer J. Science. 2014; 347: 428–431.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+K479I,,Not Available,Partial Resistance (Limited Samples = 4),Sensitive,Africa,Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+A481V,Candidate,Not Available,Partial Resistance (Limited Samples = 5),Partial Resistance,"Southeast Asia, South Asia, South America",Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+S485N,,Not Available,Sensitive(Limited Samples = 2),Sensitive,"Southeast Asia, Africa",Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+Y493H,Validate,Partial Resistance,Partial Resistance,Partial Resistance,"Southeast Asia, Africa",Amaratunga C. Antimicrob Agents Chemother. 2014; 58:4938–4940.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+F495L,,Partial Resistance,Not Available,Partial Resistance,"Southeast Asia, Africa",Siddiqui FA. mBio. 2020; 11:e00090-20.,Not Available
+R515K,Candidate,Partial Resistance,Partial Resistance,Sensitive,"Southeast Asia, Africa",Sene SD. Front Parasitol. 2023; 2:1076759.,Anderson TJC. Mol Biol Evol. 2017; 34:131–144
+V520A,,Sensitive (median < 1%),Not Available,Sensitive,Africa,Behrens HM. mBio. 2024; 15:e01981-23.,
+P527H,Candidate,Not Available,Sensitive,Partial Resistance,Southeast Asia,Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+P527L,,Not Available,Partial Resistance (Limited Samples =1),Partial Resistance,Southeast Asia,Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+G533S,,Partial Resistance,Not Available,Partial Resistance,"Southeast Asia, Africa",Siddiqui FA. Antimicrob Agents Chemother. 2025; 69:e00162-25.,Not Available
+G533A,,Sensitive,Partial Resistance,Partial Resistance,"Southeast Asia, South Asia, Africa",Siddiqui FA. Antimicrob Agents Chemother. 2025; 69:e00162-25.,Anderson TJ. Mol Biol Evol. 2017; 34:131–144.
+N537I,Candidate,Partial Resistance,Partial Resistance  (Limited Samples = 6),Partial Resistance,Southeast Asia,Andagalu B. Int J Infect Dis. 2025; 159:107971.,Anderson TJ. Mol Biol Evol. 2017; 34:131–144.
+G538V,Candidate,Partial Resistance,Partial Resistance,Partial Resistance,"Southeast Asia, South Asia, Africa, South America",Boullé M. Emerg Infect Dis. 2016; 22:1503–1505.,Boullé M. Emerg Infect Dis. 2016; 22:1503–1505.
+R539T,Validate,Partial Resistance,Partial Resistance,Partial Resistance,"Southeast Asia, South Asia, Africa, South America",Behrens HM. mBio. 2024; 15:e01981-23.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+I543T,Validate,Partial Resistance,Partial Resistance,Partial Resistance,Southeast Asia,Straimer J. Science. 2015; 347:428–431.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+P553L,Validate,Partial Resistance,Partial Resistance,Partial Resistance,"Southeast Asia, Africa",Stokes BA. eLife. 2021; 10:e66277.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+R561H,Validate,Partial Resistance,Partial Resistance,Partial Resistance,"Southeast Asia, Africa",Uwimana A. Nat Med. 2020; 26:1602–1608,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+V568G,Candidate,Not Available,Partial Resistance,Partial Resistance,"Southeast Asia, Africa",Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+P574L,Validate,Partial Resistance,Partial Resistance,Partial Resistance,"Southeast Asia, Africa",Uwimana A. Nat Med. 2020; 26:1602–1608,
+R575K,,Not Available,Partial Resistance (Limited Samples =2),Partial Resistance,"Southeast Asia, Africa",Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+C580Y,Validate,Partial Resistance,Partial Resistance,Partial Resistance,"Southeast Asia, Africa, South America",Straimer J. Science. 2015; 347:428–431.,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
+V589I,,Partial Resistance,Not Available,Partial Resistance,Africa,Behrens HM. mBio. 2024; 15:e01981-23.,Not Available
+F614L,,Not Available,Sensitive (Limited Samples = 1),Partial Resistance,Africa,Not Available,Anderson TJ. Mol Biol Evol. 2017; 34:131–144.
+R622I,Validate,Partial Resistance,Not Available,Sensitive,Africa,Mihreteab S. N Engl J Med. 2023; 389:1191–1202.,Not Available
+A675V,Validate,Not Available,Partial Resistance,Partial Resistance,"Southeast Asia, Africa",Not Available,WWARN K13 Genotype-Phenotype Study Group. BMC Medicine. 2019; 17:1.
