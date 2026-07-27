@@ -2,11 +2,13 @@
 features/
 *_features.pkl
 
-# Large shipped result sets: tracked as data, not in git.
-# Distribute the folder itself (or an archive of it), not a clone.
+# Large 56-gene DMS outputs (260 MB) — the unpublished extension, not paper
+# observations. Distribute via a data archive (e.g. Zenodo), not git.
 results/mutagenesis_56genes/dms/
 results/mutagenesis_56genes/rankscore/
-data/raw/sequences/
+
+# NOTE: data/raw/sequences/ (33 MB, 167 genes) IS tracked — it is needed to
+# reproduce the Fig 4 single-variant benchmark and the gene-panel verify check.
 
 # Local outputs
 verify/verification_report.csv
