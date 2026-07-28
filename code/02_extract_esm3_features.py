@@ -7,8 +7,10 @@ extractor, no fine-tuning.
     python code/02_extract_esm3_features.py --genes PF3D7_1343700      # minutes
     python code/02_extract_esm3_features.py --all                      # GPU-hours
 
-Requires the esm_env environment and a CUDA GPU. Genes whose output already
-exists are skipped.
+Requires the esm_env environment. Runs on GPU when one is visible and falls back
+to CPU otherwise (K13 is ~140s on CPU; the full panel wants a GPU). ESM-3 Open
+Small is gated: authenticate once with `huggingface-cli login` before first use.
+Genes whose output already exists are skipped.
 """
 
 import argparse

@@ -84,18 +84,28 @@ features, so run Tier 2 for at least one gene first.
 The ESM-3 feature cache is 33.4 GB for the full panel and is not shipped. Regenerate
 it from the included isolate sequences:
 
+ESM-3 Open Small is gated on HuggingFace — authenticate once first:
+
 ```bash
-# one gene, minutes — validates the whole chain cheaply
+huggingface-cli login          # or export HF_TOKEN=...
+```
+
+```bash
+# one gene — validates the whole chain cheaply (~140s on CPU, faster on GPU)
 python code/02_extract_esm3_features.py --genes PF3D7_1343700 --out features
 python code/03_train_classifiers.py --genes PF3D7_1343700 --features features
-# expect: valid auROC 0.8796, test auROC 0.8962
+# the RF row reproduces the published K13: valid auROC 0.8796, test auROC 0.8959
+# (CPU vs GPU float drift is ~3e-4). Note: 03 reports the best model by validation
+# auROC; the four classifiers sit within 0.002, so that pick can differ from RF.
 
 # the full panel, GPU-hours to days
 python code/02_extract_esm3_features.py --all --out features
 ```
 
-Needs the `esm_env` environment and a CUDA GPU (developed on an RTX 3090). ESM-3 is
-used strictly as a **frozen** feature extractor — no gradients, no fine-tuning.
+Needs the `esm_env` environment. Runs on GPU when one is visible and falls back to
+CPU otherwise (developed on an RTX 3090; one gene is minutes on CPU, the full panel
+wants a GPU). ESM-3 is used strictly as a **frozen** feature extractor — no
+gradients, no fine-tuning.
 
 ### Tier 3 — the 56-gene deep mutational scan (GPU-weeks; outputs shipped)
 
