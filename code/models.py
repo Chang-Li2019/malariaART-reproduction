@@ -18,7 +18,7 @@ def pool_embedding(n_features: int, embedding: np.ndarray) -> np.ndarray:
 
     The cached features are not uniform across genes: some were pooled over the
     embedding dimension (giving a length-L vector) and some over the sequence
-    dimension (giving 1536). The model's n_features says which. See CONFLICTS.md.
+    dimension (giving 1536). The model's n_features says which.
     """
     length, dimension = embedding.shape
     if n_features == dimension:

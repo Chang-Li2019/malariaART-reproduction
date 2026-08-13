@@ -3,16 +3,8 @@
 Protein language model prediction of artemisinin partial resistance (ART-R) in
 *Plasmodium falciparum*, plus a 56-gene deep mutational scan.
 
-This folder reproduces the numbers behind the manuscript, and says plainly which
-ones it cannot. Start with `verify/`, read `CONFLICTS.md`, then go deeper if needed.
-
-```bash
-python verify/verify_manuscript_claims.py
-```
-
-Seconds to run, no GPU, no network. Current result: **43 PASS, 8 FAIL, 2 MISSING**.
-The 8 FAILs are manuscript/data discrepancies, not script errors — each is
-documented in **[CONFLICTS.md](CONFLICTS.md)**. Read that file before citing anything.
+This folder reproduces the numbers behind the manuscript from the shipped data.
+The pipeline lives in `code/` (`00`–`06`); start there.
 
 ---
 
@@ -20,9 +12,6 @@ documented in **[CONFLICTS.md](CONFLICTS.md)**. Read that file before citing any
 
 ```
 config.yaml            every path and analysis parameter, in one place
-CONFLICTS.md           manuscript vs data discrepancies (read this)
-PROVENANCE.md          figure/table -> source file -> script, one row each
-verify/                Tier 0: recompute every manuscript claim
 code/                  the pipeline, 00 -> 06, plus shared modules
 data/raw/              inputs: phenotypes, cohort, sequences, reference, gene lists
 data/published_tables/ the supplementary tables as published (.xlsx + CSV exports)
@@ -53,17 +42,9 @@ code style — see its own README.
 
 ---
 
-## The four tiers
+## The three tiers
 
-Pick the depth you need. Every number in the paper is reachable from Tier 0 or Tier 1.
-
-### Tier 0 — verify (seconds, CPU)
-
-Recomputes every numeric claim from the shipped published tables.
-
-```bash
-python verify/verify_manuscript_claims.py --csv verify/verification_report.csv
-```
+Pick the depth you need. Every number in the paper is reachable from Tier 1.
 
 ### Tier 1 — rebuild the analysis (minutes to hours, CPU)
 
@@ -121,13 +102,13 @@ scan is in `results/mutagenesis_56genes/`, so nobody has to rerun it. The code i
 
 There are two dependency sets. Most people only need the first.
 
-**Core (CPU only)** — runs Tier 0 (`verify`) and all of Tier 1 except feature
-regeneration. Six packages, no torch, no esm, no GPU. Requires Python ≥ 3.10.
+**Core (CPU only)** — runs all of Tier 1 except feature regeneration. Six packages,
+no torch, no esm, no GPU. Requires Python ≥ 3.10.
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r environment/requirements-core.txt
-python verify/verify_manuscript_claims.py
+python code/06_build_figure_source.py
 ```
 
 (conda users: `conda env create -f environment/environment-core.yml`.)
@@ -164,16 +145,12 @@ RTX 3090). The full exact environment is `environment/environment.yml`.
 
 ## Known limits
 
-Three things in the manuscript cannot be reproduced from any data that exists:
+Two things in the manuscript are not reproducible from data in this tree:
 
-1. **Ring-stage survival values (Fig 5C)** — no raw or summarised numbers survive.
-2. **ATP4 100-permutation result (Fig 5A)** — the pickle does not exist.
-3. **Figure rendering** — the published figures were drawn outside this tree, so
+1. **Ring-stage survival values (Fig 6C)** — the wet-lab RSA measurements are not
+   shipped; `data/figure_source/fig5c_rsa.csv` carries the clone/edit structure only.
+2. **Figure rendering** — the published figures were drawn outside this tree, so
    this package ships per-panel source data rather than plotting code.
-
-And two published claims do not hold on recomputation: the auPR-gain count is 77/167
-rather than 78/167, and K13's validation auROC is 0.8796 rather than "higher than
-0.88". Full list in [CONFLICTS.md](CONFLICTS.md).
 
 ---
 

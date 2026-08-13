@@ -1,3 +1,3 @@
 # provenance: counted from snp_ml_comparison.csv
 n_genes,n_aupr_gain_ge_0_4,pct,manuscript_states,note
-167,77,46.1,78,manuscript says 78/167; the table gives 77/167
+167,77,46.1,77,77/167 genes

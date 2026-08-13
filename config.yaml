@@ -1,6 +1,6 @@
 # malariaART_release — single source of truth for paths.
 #
-# Every script in code/ and verify/ resolves its inputs through this file.
+# Every script in code/ resolves its inputs through this file.
 # To relocate the package, edit `release_root` (and `external_*` if you keep the
 # large regenerable artifacts outside the release folder).
 

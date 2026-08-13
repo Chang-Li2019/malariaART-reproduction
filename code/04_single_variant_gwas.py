@@ -11,7 +11,7 @@ CPU only, minutes — this step needs sequences, not ESM-3 features.
 
 CRT (PF3D7_0709000) should select 326_N>S. The odds ratio is computed on the
 test split, which is what reproduces the published table (Supplementary Table 5):
-whole-cohort odds ratios differ by an order of magnitude. See CONFLICTS.md.
+whole-cohort odds ratios differ by an order of magnitude.
 """
 
 import argparse

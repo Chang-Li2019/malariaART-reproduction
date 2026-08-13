@@ -11,7 +11,6 @@ results/mutagenesis_56genes/rankscore/
 # reproduce the Fig 4 single-variant benchmark and the gene-panel verify check.
 
 # Local outputs
-verify/verification_report.csv
 *.log
 
 __pycache__/

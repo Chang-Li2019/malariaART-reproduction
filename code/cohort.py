@@ -3,7 +3,7 @@
 label = 1 when parasite clearance is >= 5 h. Split by collection year:
 <= 2014 train, 2015-2016 valid, >= 2017 test.
 
-Two facts recorded in CONFLICTS.md and honoured here:
+Two facts honoured here:
   * TRAC-I reports clearance *time* and TRAC-II reports clearance *half-life*.
     The original pipeline applies the same 5 h cutoff to both; kept for
     comparability.

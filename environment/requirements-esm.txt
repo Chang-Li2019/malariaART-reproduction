@@ -1,7 +1,7 @@
 # ESM-3 dependencies — only for regenerating features (Tier 2) and the DMS (Tier 3).
 #
 # Needed by 02_extract_esm3_features.py and code/mutagenesis_rf/. Requires a CUDA
-# GPU. If you only run verify/ or the read-only Tier 1 scripts, you do NOT need
+# GPU. If you only run the read-only Tier 1 scripts, you do NOT need
 # any of this — use requirements-core.txt alone.
 #
 #   pip install -r environment/requirements-esm.txt

@@ -1,6 +1,6 @@
 # Core dependencies — everything except regenerating ESM-3 features.
 #
-# Covers: verify/ (Tier 0), and Tier 1 scripts 00, 01, 03, 04, 06, the two
+# Covers: Tier 1 scripts 00, 01, 03, 04, 06, the two
 # postprocess scripts, and convert_supplementary_to_csv. No GPU, no torch, no esm.
 #
 # Requires Python >= 3.10 (the code uses `X | None` type hints at runtime).
@@ -10,8 +10,8 @@
 #   pip install -r environment/requirements-core.txt
 #
 # Versions are pinned to the ones the published results were produced with, so
-# retraining (03_train_classifiers) reproduces exactly. Tier 0 (verify) and the
-# read-only scripts tolerate newer releases if you need to relax these.
+# retraining (03_train_classifiers) reproduces exactly. The read-only scripts
+# tolerate newer releases if you need to relax these.
 
 numpy==1.26.4
 pandas==2.1.4

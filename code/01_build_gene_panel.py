@@ -4,7 +4,7 @@ The Methods say the panel is 173 PlasmoDB hits minus non-chromosomal genes,
 giving 167. The data disagrees: 173 - 2 non-chromosomal = 171, then 23
 undocumented drops and 19 literature additions give 167. This script recomputes
 that chain and writes a per-gene membership reason, because the panel cannot be
-regenerated from the text and is shipped as data instead. See CONFLICTS.md.
+regenerated from the text and is shipped as data instead.
 
     python code/01_build_gene_panel.py --out gene_panel_provenance.csv
 """

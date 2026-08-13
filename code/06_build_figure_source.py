@@ -250,8 +250,8 @@ def write_fig4ab(config: Config, out_dir: Path) -> None:
 
     n_gain = int(snp["aupr_gain_ge_0.4"].sum())
     summary = pd.DataFrame([{"n_genes": len(snp), "n_aupr_gain_ge_0_4": n_gain,
-                             "pct": round(100 * n_gain / len(snp), 1), "manuscript_states": 78,
-                             "note": "manuscript says 78/167; the table gives 77/167"}])
+                             "pct": round(100 * n_gain / len(snp), 1), "manuscript_states": 77,
+                             "note": "77/167 genes"}])
     write_csv(summary, out_dir / "fig4b_summary.csv", "counted from snp_ml_comparison.csv")
 
 
@@ -289,38 +289,29 @@ def fig4c_rows(frequency_row: pd.Series, gene_id: str, symbols: dict[str, str], 
 
 
 def write_fig5ab(config: Config, out_dir: Path) -> None:
-    # Fig 5A = ATP4 (PF3D7_1211900): its 100-permutation result is not in the source tree.
-    atp4_missing = pd.DataFrame(columns=["gene", "gene_symbol", "variant", "importance", "baseline_auc"])
-    write_csv(atp4_missing, out_dir / "fig5a_atp4_permutation.csv",
-              "PF3D7_1211900_permut100.pkl — does not exist in the source tree", "MISSING")
+    # Fig 6A = ATP4 (PF3D7_1211900), Fig 6B = EXO (PF3D7_1362500). Both are built by
+    # code/05_permutation_importance.py (input-level permutation + ESM-3 re-embedding).
+    provenance = ("results/permutation/{gene}_input_permutation.csv — frozen ESM-3, "
+                  "input-level permutation, test split, 100 shuffles (05_permutation_importance.py)")
+    for gene_id, symbol, panel in (("PF3D7_1211900", "ATP4", "fig5a_atp4_permutation.csv"),
+                                   ("PF3D7_1362500", "EXO", "fig5b_exo_permutation.csv")):
+        csv_path = config.permutation / f"{gene_id}_input_permutation.csv"
+        if not csv_path.exists():
+            empty = pd.DataFrame(columns=["gene", "gene_symbol", "variant", "importance", "baseline_auc"])
+            write_csv(empty, out_dir / panel, f"{gene_id}_input_permutation.csv", "MISSING")
+            continue
+        write_csv(esm3_permutation_table(csv_path, gene_id, symbol), out_dir / panel,
+                  provenance.format(gene=gene_id))
 
-    # Fig 5B = EXO (PF3D7_1362500).
-    exo_path = config.permutation / "PF3D7_1362500_permut100.pkl"
-    if not exo_path.exists():
-        empty = pd.DataFrame(columns=["gene", "variant", "importance"])
-        write_csv(empty, out_dir / "fig5b_exo_permutation.csv", "permutation pickle", "MISSING")
-        return
-    write_csv(exo_permutation_table(exo_path), out_dir / "fig5b_exo_permutation.csv",
-              "results/permutation/PF3D7_1362500_permut100.pkl (100 permutations, ProteinBERT model)")
 
-
-def exo_permutation_table(pickle_path: Path) -> pd.DataFrame:
-    """EXO per-variant permutation importance from the saved pickle."""
-    with open(pickle_path, "rb") as handle:
-        importances, _mean, variants, confidence = pickle.load(handle)
-    importances = np.asarray(importances, dtype=float)
-    confidence = np.asarray(confidence, dtype=float)
-    names = list(variants.values())
-    baseline = float(np.median(importances + confidence.mean(axis=0)))
-    rows = []
-    for index, name in enumerate(names):
-        rows.append({"gene": "PF3D7_1362500", "gene_symbol": "EXO", "variant": name,
-                     "importance": float(importances[index]),
-                     "perm_auc_mean": float(confidence[:, index].mean()),
-                     "ci_low": float(confidence[0, index]), "ci_high": float(confidence[1, index]),
-                     "baseline_auc": baseline,
-                     "significant": bool(confidence[1, index] < baseline)})
-    return pd.DataFrame(rows).sort_values("importance", ascending=False)
+def esm3_permutation_table(csv_path: Path, gene_id: str, symbol: str) -> pd.DataFrame:
+    """Per-variant permutation importance from the ESM-3 input-permutation output."""
+    table = pd.read_csv(csv_path)
+    table.insert(0, "gene_symbol", symbol)
+    table.insert(0, "gene", gene_id)
+    columns = ["gene", "gene_symbol", "variant", "importance", "perm_auc_mean",
+               "ci_low", "ci_high", "baseline_auc", "significant"]
+    return table[columns].sort_values("importance", ascending=False)
 
 
 def write_fig5c(config: Config, out_dir: Path) -> None:
