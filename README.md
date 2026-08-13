@@ -1,130 +1,116 @@
-# malariaART — reproduction package
+# malariaART
 
-Protein language model prediction of artemisinin partial resistance (ART-R) in
-*Plasmodium falciparum*, plus a 56-gene deep mutational scan.
-
-This folder reproduces the numbers behind the manuscript from the shipped data.
-The pipeline lives in `code/` (`00`–`06`); start there.
+Predicting artemisinin partial resistance (ART-R) in *Plasmodium falciparum*
+directly from protein sequence, using **ESM-3 protein-language-model embeddings**.
+This repository holds the code, inputs, and trained models for that method, plus a
+56-gene deep mutational scan built on top of it.
 
 ---
 
-## What is here
+## The method
+
+For each parasite isolate we take the amino-acid sequence of a gene and ask a
+protein language model what it "thinks" of that sequence, then let a simple
+classifier map that representation to a resistance phenotype.
+
+1. **Sequence.** Per-isolate genotypes (MalariaGEN Pf7) are translated against the
+   PlasmoDB-66 3D7 reference to give one protein sequence per isolate per gene.
+2. **Embedding.** ESM-3 Open Small (`esm3_sm_open_v1`, d_model 1536) is used as a
+   **frozen feature extractor** — no gradients, no fine-tuning. Each residue gets a
+   1536-d vector; a gene's isolate is summarised by mean-pooling over positions
+   (a 1536-d protein vector).
+3. **Classifier.** A per-gene model predicts ART-R from that vector. Four are
+   trained — RandomForest, GradientBoosting, LogisticRegression, SVM — and the one
+   with the best validation auROC is kept. RandomForest is the headline model.
+4. **Phenotype.** ART-R is defined on clinical parasite clearance, independent of
+   genotype: half-life **≥ 5 h** is resistant, `< 5 h` sensitive.
+5. **Scope.** K13 is used to establish and benchmark the approach, which is then
+   applied to 167 candidate genes and compared against single-variant predictors.
+6. **Attribution.** To find which residue a gene's model relies on, we permute the
+   amino acid at one position across isolates, **re-embed the changed sequence**, and
+   re-score — the auROC drop is that position's importance. This prioritised
+   **EXO E415G** and **ATP4 G1128R**, which were then tested by CRISPR–Cas9 editing.
+7. **Mutational scan.** Separately, every possible substitution (position × 19
+   residues) is scored across 56 genes — 1,725,713 mutations in all.
+
+### Cohort and split
+
+1,293 clinical isolates (2011–2018), split by year so the model is always tested on
+the future:
+
+| Split | Years | n | resistant / sensitive |
+|---|---|---|---|
+| train | ≤ 2014 | 769 | 254 / 515 |
+| validation | 2015–2016 | 315 | 154 / 161 |
+| test | ≥ 2017 | 209 | 150 / 59 |
+
+K13 reaches auROC **0.88** (validation) and **0.90** (test); across the 167-gene
+panel, 77 genes gain ≥ 0.4 auPR over their best single variant.
+
+---
+
+## The pipeline (`code/`)
+
+Numbered scripts `00`–`06` run in order; each resolves its paths through
+`config.yaml`.
+
+| Script | Does |
+|---|---|
+| `00_build_cohort.py` | assemble the 1,293-isolate cohort, labels, and temporal split |
+| `01_build_gene_panel.py` | the candidate-gene panel and its per-gene provenance |
+| `02_extract_esm3_features.py` | embed isolate sequences with frozen ESM-3 (GPU) |
+| `03_train_classifiers.py` | train RF / GB / LR / SVM per gene; keep best by validation auROC |
+| `04_single_variant_gwas.py` | Fisher tests + per-variant auROC (the single-variant comparator) |
+| `05_permutation_importance.py` | input-level permutation with re-embedding (EXO / ATP4) |
+| `06_build_figure_source.py` | one tidy source-data table per figure panel |
+
+Shared modules: `config.py` (paths), `cohort.py` (labels + split), `sequences.py`
+(FASTA + isolate sequences), `tables.py` (published-table readers), `models.py`
+(model IO + pooling). ESM-3 is wrapped in `code/implementation/`.
+`code/mutagenesis_rf/` holds the 56-gene scan (shipped as run, with its own README);
+`code/postprocess/` turns the scan into per-variant rank scores.
+
+---
+
+## What is in the repo
 
 ```
-config.yaml            every path and analysis parameter, in one place
-code/                  the pipeline, 00 -> 06, plus shared modules
-data/raw/              inputs: phenotypes, cohort, sequences, reference, gene lists
-data/published_tables/ the supplementary tables as published (.xlsx + CSV exports)
-data/figure_source/    one tidy table per figure panel  <- give these to whoever draws the figures
-results/               trained models, the 56-gene DMS, permutation outputs
+config.yaml            every path and analysis parameter
+code/                  the pipeline (00-06), shared modules, ESM-3 wrapper, the DMS
+data/raw/              phenotypes, cohort metadata, isolate sequences, reference, gene lists
+data/published_tables/ the supplementary tables (.xlsx + CSV exports)
+data/figure_source/    one CSV per figure panel
+results/               trained per-gene models, permutation outputs, the 56-gene scan
 environment/           conda + pip specifications
 ```
 
-Total ~360 MB. The ESM-3 feature cache (33.4 GB) is deliberately **not** shipped —
-see Tier 2 below.
-
-### Code layout
-
-The numbered scripts `00`–`06` are the pipeline. They share five small modules,
-each with one responsibility:
-
-| Module | Holds |
-|---|---|
-| `code/config.py` | `load_config()` — resolves every path in `config.yaml` |
-| `code/cohort.py` | labels and the temporal train/valid/test split |
-| `code/sequences.py` | the reference FASTA and per-gene isolate sequences |
-| `code/tables.py` | readers for the published tables and gene lists |
-| `code/models.py` | loading RF models and turning embeddings into predictions |
-
-`code/mutagenesis_rf/` (the 56-gene scan) is shipped byte-identical to the
-independently-audited version and is the one part not written to this package's
-code style — see its own README.
+The ESM-3 feature cache (~33 GB for the full panel) is **not** shipped; regenerate it
+from the isolate sequences with `02_extract_esm3_features.py`.
 
 ---
 
-## The three tiers
+## Running it
 
-Pick the depth you need. Every number in the paper is reachable from Tier 1.
-
-### Tier 1 — rebuild the analysis (minutes to hours, CPU)
-
-```bash
-python code/00_build_cohort.py                     # 1293 isolates, 769/315/209
-python code/01_build_gene_panel.py                 # the 173 -> 171 -> 167 chain
-python code/04_single_variant_gwas.py --genes PF3D7_0709000
-python code/06_build_figure_source.py              # regenerate data/figure_source/
-python code/postprocess/make_rankscore.py --all --check
-python code/postprocess/literature_validation.py --check --report
-```
-
-Model retraining (`code/03_train_classifiers.py`) also lives in this tier but needs
-features, so run Tier 2 for at least one gene first.
-
-### Tier 2 — re-derive features from sequence (GPU)
-
-The ESM-3 feature cache is 33.4 GB for the full panel and is not shipped. Regenerate
-it from the included isolate sequences:
-
-ESM-3 Open Small is gated on HuggingFace — authenticate once first:
-
-```bash
-huggingface-cli login          # or export HF_TOKEN=...
-```
-
-```bash
-# one gene — validates the whole chain cheaply (~140s on CPU, faster on GPU)
-python code/02_extract_esm3_features.py --genes PF3D7_1343700 --out features
-python code/03_train_classifiers.py --genes PF3D7_1343700 --features features
-# the RF row reproduces the published K13: valid auROC 0.8796, test auROC 0.8959
-# (CPU vs GPU float drift is ~3e-4). Note: 03 reports the best model by validation
-# auROC; the four classifiers sit within 0.002, so that pick can differ from RF.
-
-# the full panel, GPU-hours to days
-python code/02_extract_esm3_features.py --all --out features
-```
-
-Needs the `esm_env` environment. Runs on GPU when one is visible and falls back to
-CPU otherwise (developed on an RTX 3090; one gene is minutes on CPU, the full panel
-wants a GPU). ESM-3 is used strictly as a **frozen** feature extractor — no
-gradients, no fine-tuning.
-
-### Tier 3 — the 56-gene deep mutational scan (GPU-weeks; outputs shipped)
-
-1,725,713 mutations (every position × 19 substitutions) across 56 genes. The finished
-scan is in `results/mutagenesis_56genes/`, so nobody has to rerun it. The code is in
-`code/mutagenesis_rf/` — shipped byte-identical to the audited version, with its own
-[README](code/mutagenesis_rf/README.md) and an independent audit in
-`results/mutagenesis_56genes/INDEPENDENT_AUDIT.md`.
-
----
-
-## Environment
-
-There are two dependency sets. Most people only need the first.
-
-**Core (CPU only)** — runs all of Tier 1 except feature regeneration. Six packages,
-no torch, no esm, no GPU. Requires Python ≥ 3.10.
+**CPU only** — everything except embedding. Six packages, no torch/esm/GPU, Python ≥ 3.10:
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r environment/requirements-core.txt
-python code/06_build_figure_source.py
+python code/06_build_figure_source.py       # rebuild the figure tables from shipped results
 ```
 
-(conda users: `conda env create -f environment/environment-core.yml`.)
-
-**ESM-3 (GPU)** — only for regenerating features (Tier 2) or the DMS (Tier 3).
-Adds `torch` and `esm`; needs a CUDA GPU.
+**With a GPU** — to embed sequences or run the scan (adds `torch` + `esm`, CUDA GPU):
 
 ```bash
 pip install -r environment/requirements-esm.txt
+huggingface-cli login                        # ESM-3 Open Small is gated; ~5 GB, downloads once
+python code/02_extract_esm3_features.py --genes PF3D7_1343700 --out features
+python code/03_train_classifiers.py --genes PF3D7_1343700 --features features
 ```
 
-ESM-3 weights (~5 GB) download once from HuggingFace on first use.
-
-Versions are pinned to the ones that produced the published results (numpy 1.26.4,
-pandas 2.1.4, scipy 1.15.0, scikit-learn 1.6.0; torch 2.5.1 + CUDA 12.4 on an
-RTX 3090). The full exact environment is `environment/environment.yml`.
+One K13 gene is ~140 s on CPU; the full panel wants a GPU (developed on an RTX 3090).
+Package versions are pinned to those that produced the results (numpy 1.26.4,
+pandas 2.1.4, scipy 1.15.0, scikit-learn 1.6.0; torch 2.5.1 / CUDA 12.4).
 
 ---
 
@@ -133,31 +119,29 @@ RTX 3090). The full exact environment is `environment/environment.yml`.
 | Input | Source |
 |---|---|
 | Genotypes, sample metadata | MalariaGEN Pf7, via `malariagen_data` |
-| TRAC-I clearance times | Zhu et al. 2018, *Nat Commun* 9:5158, supplementary MOESM20 |
+| TRAC-I clearance times | Zhu et al. 2018, *Nat Commun* 9:5158, MOESM20 |
 | TRAC-II clearance half-lives | Zhu et al. 2022, *Commun Biol* 5:274 |
 | Reference proteome / CDS | PlasmoDB release 66, *P. falciparum* 3D7 |
-| Protein language model | ESM-3 Open Small (`esm3_sm_open_v1`, d_model 1536), Hayes et al. 2025 *Science* |
-| Evidence scores (Fig 3B/C) | Oberstaller et al. 2021, *IJP-DDR* 16:119–128, supplementary `mmc1.xlsx` (PMC8187163) |
+| Protein language model | ESM-3 Open Small, Hayes et al. 2025, *Science* |
+| Evidence scores | Oberstaller et al. 2021, *IJP-DDR* 16:119–128 (PMC8187163) |
 | Transcriptomic benchmark | GuanLab/Predict-Malaria-ART-Resistance (LightGBM) |
-| Parasite lines | BEI Resources MRA-1236 (Cam2, K13 C580Y) and MRA-1254 (Cam2_rev) |
+| Parasite lines | BEI Resources MRA-1236 (Cam2, K13 C580Y), MRA-1254 (Cam2_rev) |
 
 ---
 
-## Known limits
+## Not in the repo
 
-Two things in the manuscript are not reproducible from data in this tree:
-
-1. **Ring-stage survival values (Fig 6C)** — the wet-lab RSA measurements are not
-   shipped; `data/figure_source/fig5c_rsa.csv` carries the clone/edit structure only.
-2. **Figure rendering** — the published figures were drawn outside this tree, so
-   this package ships per-panel source data rather than plotting code.
+The figures are drawn outside this tree, so `data/figure_source/` ships per-panel
+tables rather than plotting code. The ring-stage-survival measurements behind the
+CRISPR panel are wet-lab data and are not included; `data/figure_source/fig5c_rsa.csv`
+carries the clone/edit structure only.
 
 ---
 
-## Citation
+## A caveat on the mutational-scan rank scores
 
-If you use the 56-gene mutational scan, note that its rank scores reflect training
-data as much as biology: WHO-validated K13 markers that appear in the training
-isolates sit at a median 99.8th percentile, while the two that do not sit at a median
-45th. Run `python code/postprocess/literature_validation.py --report` for the
-leakage-controlled breakdown before drawing conclusions from a high rank score.
+The 56-gene scan's rank scores reflect training data as much as biology:
+WHO-validated K13 markers that appear in the training isolates sit at a median
+99.8th percentile, while the two that do not sit at a median 45th. Run
+`python code/postprocess/literature_validation.py --report` for the
+leakage-controlled breakdown before reading a high rank score as a signal.
