@@ -77,15 +77,16 @@ Shared modules: `config.py` (paths), `cohort.py` (labels + split), `sequences.py
 ```
 config.yaml            every path and analysis parameter
 code/                  the pipeline (00-06), shared modules, ESM-3 wrapper, the DMS
-data/raw/              phenotypes, cohort metadata, isolate sequences, reference, gene lists
+data/raw/              reference proteome/CDS, gene lists, external evidence scores
+data/example/          5 example isolate sequences (2011-2013) — input-format illustration
 data/published_tables/ the supplementary tables (.xlsx + CSV exports)
 data/figure_source/    one CSV per figure panel
 results/               trained per-gene models, permutation outputs, the 56-gene scan
 environment/           conda + pip specifications
 ```
 
-The ESM-3 feature cache (~33 GB for the full panel) is **not** shipped; regenerate it
-from the isolate sequences with `02_extract_esm3_features.py`.
+The ESM-3 feature cache is **not** shipped; regenerate it from isolate sequences
+(obtained per **Data availability**) with `02_extract_esm3_features.py`.
 
 ---
 
@@ -99,7 +100,10 @@ pip install -r environment/requirements-core.txt
 python code/06_build_figure_source.py       # rebuild the figure tables from shipped results
 ```
 
-**With a GPU** — to embed sequences or run the scan (adds `torch` + `esm`, CUDA GPU):
+**With a GPU** — to embed sequences or run the scan (adds `torch` + `esm`, CUDA GPU).
+Isolate sequences are not shipped (see **Data availability**); these commands assume
+you have placed per-gene sequences under `data/raw/sequences/`. The five sequences in
+`data/example/` illustrate the expected format.
 
 ```bash
 pip install -r environment/requirements-esm.txt
@@ -111,6 +115,25 @@ python code/03_train_classifiers.py --genes PF3D7_1343700 --features features
 One K13 gene is ~140 s on CPU; the full panel wants a GPU (developed on an RTX 3090).
 Package versions are pinned to those that produced the results (numpy 1.26.4,
 pandas 2.1.4, scipy 1.15.0, scikit-learn 1.6.0; torch 2.5.1 / CUDA 12.4).
+
+---
+
+## Data availability
+
+Individual-level data are **not** included in this repository — specifically the
+per-isolate protein sequences, the clinical parasite-clearance (ART-R) phenotypes,
+and the per-sample metadata. They are available from their original sources (see
+**Data sources** below): the clearance phenotypes from Zhu et al. 2018 (*Nat Commun*
+9:5158, MOESM20) and Zhu et al. 2022 (*Commun Biol* 5:274), and genotypes / sample
+metadata from MalariaGEN Pf7 via `malariagen_data`; per-isolate sequences are
+reconstructed by translating Pf7 genotypes against the PlasmoDB-66 3D7 reference.
+
+Consequently the cohort-building and sequence-consuming steps (`00_build_cohort`,
+`02_extract_esm3_features`, `04_single_variant_gwas`) cannot be run end-to-end from
+this repository alone. `data/example/` ships five isolate sequences (2011–2013, K13)
+to illustrate the input format only — no phenotype is included. Everything downstream
+of the embeddings — trained models, permutation outputs, figure tables, and the
+aggregate supplementary tables — is shipped and runs as-is.
 
 ---
 

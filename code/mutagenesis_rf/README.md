@@ -6,6 +6,11 @@ results in `results/mutagenesis_56genes/`**. They were independently audited
 bugs), so they are deliberately not refactored — editing them would invalidate
 that audit.
 
+> **Data note:** running the scan needs the per-isolate sequences and clinical
+> ART-R phenotypes, which are **not** included in this repository — see *Data
+> availability* in the top-level `README.md`. The shipped scan outputs in
+> `results/mutagenesis_56genes/` do not require them.
+
 The one consequence: they carry absolute paths to the original machine. To run
 them elsewhere, edit the three constants at the top of `rf_pipeline.py`:
 

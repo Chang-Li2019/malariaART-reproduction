@@ -5,6 +5,10 @@
 **Scope:** `malariaPLM/mutagenesis_rf/`, `malariaPLM/implementation/` (ESM tiling), trained models,
 DMS result CSVs (56 genes), rankscore CSVs (56 genes), raw phenotype/metadata.
 
+> **Note (public release):** the raw phenotype/metadata referenced in this audit are
+> individual-level data and are **not** included in this repository; see *Data
+> availability* in the top-level `README.md`. This audit record is retained as-is.
+
 ## Overall verdict
 
 **The pipeline is correct.** Every high-risk component I could test passed decisively, including
