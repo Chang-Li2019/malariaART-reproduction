@@ -77,7 +77,7 @@ Shared modules: `config.py` (paths), `cohort.py` (labels + split), `sequences.py
 ```
 config.yaml            every path and analysis parameter
 code/                  the pipeline (00-06), shared modules, ESM-3 wrapper, the DMS
-data/raw/              reference proteome/CDS, gene lists, external evidence scores
+data/raw/              reference proteome/CDS, gene lists
 data/example/          5 example isolate sequences (2011-2013) — input-format illustration
 data/published_tables/ the supplementary tables (.xlsx + CSV exports)
 data/figure_source/    one CSV per figure panel
@@ -146,7 +146,7 @@ aggregate supplementary tables — is shipped and runs as-is.
 | TRAC-II clearance half-lives | Zhu et al. 2022, *Commun Biol* 5:274 |
 | Reference proteome / CDS | PlasmoDB release 66, *P. falciparum* 3D7 |
 | Protein language model | ESM-3 Open Small, Hayes et al. 2025, *Science* |
-| Evidence scores | Oberstaller et al. 2021, *IJP-DDR* 16:119–128 (PMC8187163) |
+| Evidence scores | Oberstaller et al. 2021, *IJP-DDR* 16:119–128 (PMC8187163) — **not redistributed here**; download the supplement into `data/raw/external/` |
 | Transcriptomic benchmark | GuanLab/Predict-Malaria-ART-Resistance (LightGBM) |
 | Parasite lines | BEI Resources MRA-1236 (Cam2, K13 C580Y), MRA-1254 (Cam2_rev) |
 
